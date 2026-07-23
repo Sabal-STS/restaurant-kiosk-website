@@ -57,4 +57,4 @@ jobs:
 
              rm -rf /tmp/sts-kiosk-website
 
-             systemctl reload nginx
+             sudo systemctl reload nginx
