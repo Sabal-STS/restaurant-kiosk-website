@@ -55,9 +55,6 @@ jobs:
 
              cp -r /tmp/sts-kiosk-website/* /var/www/html/sts-kiosk-website/
 
-             chown -R www-data:www-data /var/www/html/sts-kiosk-website
-
-
              rm -rf /tmp/sts-kiosk-website
 
              systemctl reload nginx
