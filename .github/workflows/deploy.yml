@@ -1,0 +1,63 @@
+name: Deploy Website
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Upload build to VPS
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: ${{ secrets.PORT }}
+          source: "dist/*"
+          target: "/tmp/sts-kiosk-website"
+          strip_components: 1
+
+      - name: Deploy
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: ${{ secrets.PORT }}
+          script: |
+            set -e
+
+
+
+             sudo mkdir -p /var/www/html/sts-kiosk-website
+
+
+            sudo rm -rf /var/www/html/sts-kiosk-website/*
+
+            sudo cp -r /tmp/sts-kiosk-website/* /var/www/html/sts-kiosk-website/
+
+            sudo chown -R www-data:www-data /var/www/html/sts-kiosk-website
+
+
+            sudo rm -rf /tmp/sts-kiosk-website
+
+             sudo systemctl reload nginx
