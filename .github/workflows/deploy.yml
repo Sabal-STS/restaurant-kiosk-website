@@ -48,16 +48,16 @@ jobs:
 
 
 
-             sudo mkdir -p /var/www/html/sts-kiosk-website
+             mkdir -p /var/www/html/sts-kiosk-website
 
 
-            sudo rm -rf /var/www/html/sts-kiosk-website/*
+             rm -rf /var/www/html/sts-kiosk-website/*
 
-            sudo cp -r /tmp/sts-kiosk-website/* /var/www/html/sts-kiosk-website/
+             cp -r /tmp/sts-kiosk-website/* /var/www/html/sts-kiosk-website/
 
-            sudo chown -R www-data:www-data /var/www/html/sts-kiosk-website
+             chown -R www-data:www-data /var/www/html/sts-kiosk-website
 
 
-            sudo rm -rf /tmp/sts-kiosk-website
+             rm -rf /tmp/sts-kiosk-website
 
-             sudo systemctl reload nginx
+             systemctl reload nginx
