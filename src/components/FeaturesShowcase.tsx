@@ -188,6 +188,167 @@ function useInView(threshold = 0.12) {
   return { ref, visible };
 }
 
+/* ─── Mouse-tilt 3D hook ────────────────────────────────────────────── */
+function useMouseTilt(maxAngle = 8) {
+  const ref = useRef<HTMLDivElement>(null);
+  const frameRef = useRef<number>(0);
+  const currentTilt = useRef({ x: 0, y: 0 });
+  const targetTilt = useRef({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    // Detect touch / mobile — skip tilt on those
+    const isMobile = window.matchMedia("(hover: none)").matches;
+    if (isMobile) return;
+
+    const onMove = (e: MouseEvent) => {
+      const rect = el.getBoundingClientRect();
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top + rect.height / 2;
+      const dx = (e.clientX - cx) / (rect.width / 2);
+      const dy = (e.clientY - cy) / (rect.height / 2);
+      targetTilt.current = {
+        x: -dy * maxAngle,
+        y: dx * maxAngle,
+      };
+    };
+
+    const onLeave = () => {
+      targetTilt.current = { x: 0, y: 0 };
+    };
+
+    const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
+
+    const animate = () => {
+      currentTilt.current.x = lerp(currentTilt.current.x, targetTilt.current.x, 0.08);
+      currentTilt.current.y = lerp(currentTilt.current.y, targetTilt.current.y, 0.08);
+      el.style.transform = `perspective(800px) rotateX(${currentTilt.current.x}deg) rotateY(${currentTilt.current.y}deg)`;
+      frameRef.current = requestAnimationFrame(animate);
+    };
+
+    frameRef.current = requestAnimationFrame(animate);
+    el.addEventListener("mousemove", onMove);
+    el.addEventListener("mouseleave", onLeave);
+
+    return () => {
+      cancelAnimationFrame(frameRef.current);
+      el.removeEventListener("mousemove", onMove);
+      el.removeEventListener("mouseleave", onLeave);
+    };
+  }, [maxAngle]);
+
+  return ref;
+}
+
+/* ─── Parallax scroll hook ──────────────────────────────────────────── */
+function useParallax(speed = 0.12) {
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    // Reduce parallax on mobile
+    const isMobile = window.matchMedia("(max-width: 767px)").matches;
+    if (isMobile) return;
+
+    let frame = 0;
+    const onScroll = () => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => {
+        if (!el) return;
+        const rect = el.getBoundingClientRect();
+        const viewH = window.innerHeight;
+        // -1 at top of viewport, +1 at bottom
+        const relPos = (viewH / 2 - (rect.top + rect.height / 2)) / (viewH / 2);
+        el.style.transform = `translateY(${relPos * speed * 60}px)`;
+      });
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      cancelAnimationFrame(frame);
+    };
+  }, [speed]);
+
+  return ref;
+}
+
+/* ─── iPhone Frame ──────────────────────────────────────────────────── */
+function IPhoneFrame({
+  image,
+  title,
+  onClick,
+  isFlipped,
+}: {
+  image: string;
+  title: string;
+  onClick: () => void;
+  isFlipped: boolean;
+}) {
+  const tiltRef = useMouseTilt(8);
+  const parallaxRef = useParallax(0.1);
+
+  return (
+    <div className="fc__device-wrapper" ref={parallaxRef}>
+      {/* Glow orb behind phone */}
+      <div className={`fc__phone-glow ${isFlipped ? "fc__phone-glow--right" : "fc__phone-glow--left"}`} />
+
+      {/* Mouse-tilt container */}
+      <div
+        className="fc__device-tilt"
+        ref={tiltRef}
+        onClick={onClick}
+        role="button"
+        tabIndex={0}
+        aria-label={`View ${title} fullscreen`}
+        onKeyDown={(e) => e.key === "Enter" && onClick()}
+      >
+        {/* Outer shell — side buttons etc */}
+        <div className="fc__device-shell">
+          {/* Left side buttons: volume up, volume down, mute */}
+          <div className="fc__btn fc__btn--vol-up" aria-hidden="true" />
+          <div className="fc__btn fc__btn--vol-down" aria-hidden="true" />
+          <div className="fc__btn fc__btn--mute" aria-hidden="true" />
+          {/* Right side button: power */}
+          <div className="fc__btn fc__btn--power" aria-hidden="true" />
+
+          {/* Main frame */}
+          <div className="fc__device-frame">
+            {/* Dynamic Island */}
+            <div className="fc__dynamic-island" aria-hidden="true">
+              <div className="fc__di-camera" />
+              <div className="fc__di-speaker" />
+            </div>
+
+            {/* Screen */}
+            <div className="fc__screen-inner">
+              <img
+                src={image}
+                alt={title}
+                className="fc__device-screen"
+                loading="lazy"
+                draggable={false}
+              />
+              {/* Screen glare */}
+              <div className="fc__device-glare" aria-hidden="true" />
+            </div>
+
+            {/* Home indicator */}
+            <div className="fc__home-indicator" aria-hidden="true" />
+          </div>
+        </div>
+      </div>
+
+      {/* Reflection under phone */}
+      <div className="fc__device-reflection" aria-hidden="true" />
+    </div>
+  );
+}
+
 /* ─── Feature Card ─────────────────────────────────────────────────── */
 function FeatureCard({
   feature,
@@ -198,68 +359,75 @@ function FeatureCard({
   index: number;
   onOpenLightbox: (feature: Feature) => void;
 }) {
-  const { ref, visible } = useInView();
+  const { ref, visible } = useInView(0.1);
   const isEven = index % 2 === 0;
 
   return (
     <div
       ref={ref}
-      className={`fc ${visible ? "fc--in" : ""}`}
-      style={{ "--fc-delay": `${index * 60}ms` } as React.CSSProperties}
+      className={`fc ${visible ? (isEven ? "fc--in-left" : "fc--in-right") : ""}`}
+      style={{ "--fc-delay": `${index * 40}ms` } as React.CSSProperties}
     >
-      {/* Decorative number watermark */}
+      {/* Watermark number */}
       <span className="fc__watermark" aria-hidden="true">
         {String(index + 1).padStart(2, "0")}
       </span>
 
       <div className={`fc__layout ${isEven ? "" : "fc__layout--flip"}`}>
         {/* Phone */}
-        <div className="fc__device" onClick={() => onOpenLightbox(feature)}>
-          <div className="fc__device-frame">
-            <div className="fc__device-notch" />
-            <img
-              src={feature.image}
-              alt={feature.title}
-              className="fc__device-screen"
-              loading="lazy"
-            />
-            <div className="fc__device-glare" />
-          </div>
-          <div className="fc__device-reflection" />
-        </div>
+        <IPhoneFrame
+          image={feature.image}
+          title={feature.title}
+          onClick={() => onOpenLightbox(feature)}
+          isFlipped={!isEven}
+        />
 
-        {/* Content */}
-        <div className="fc__body">
-          <div className="fc__meta">
-            <span className="fc__badge">
-              <span className="fc__badge-icon">{feature.badgeIcon}</span>
-              {feature.badge}
-            </span>
-            <span className="fc__num">{String(index + 1).padStart(2, "0")} / {String(FEATURES.length).padStart(2, "0")}</span>
+        {/* Content — glassmorphism card */}
+        <div className="fc__body-wrap">
+          <div className="fc__body">
+            <div className="fc__meta fc__stagger fc__stagger--1">
+              <span className="fc__badge">
+                <span className="fc__badge-icon">{feature.badgeIcon}</span>
+                {feature.badge}
+              </span>
+              <span className="fc__num">
+                {String(index + 1).padStart(2, "0")} / {String(FEATURES.length).padStart(2, "0")}
+              </span>
+            </div>
+            <h3 className="fc__title fc__stagger fc__stagger--2">{feature.title}</h3>
+            <p className="fc__desc fc__stagger fc__stagger--3">{feature.description}</p>
+            <ul className="fc__tags fc__stagger fc__stagger--4">
+              {feature.highlights.map((h) => (
+                <li key={h} className="fc__tag">
+                  <span className="fc__tag-dot" />
+                  {h}
+                </li>
+              ))}
+            </ul>
+            <button
+              className="fc__cta fc__stagger fc__stagger--5"
+              onClick={() => onOpenLightbox(feature)}
+              aria-label={`View ${feature.title} fullscreen`}
+            >
+              <span>View Fullscreen</span>
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <polyline points="15 3 21 3 21 9" />
+                <polyline points="9 21 3 21 3 15" />
+                <line x1="21" y1="3" x2="14" y2="10" />
+                <line x1="3" y1="21" x2="10" y2="14" />
+              </svg>
+            </button>
           </div>
-          <h3 className="fc__title">{feature.title}</h3>
-          <p className="fc__desc">{feature.description}</p>
-          <ul className="fc__tags">
-            {feature.highlights.map((h) => (
-              <li key={h} className="fc__tag">
-                <span className="fc__tag-dot" />
-                {h}
-              </li>
-            ))}
-          </ul>
-          <button
-            className="fc__cta"
-            onClick={() => onOpenLightbox(feature)}
-            aria-label={`View ${feature.title} fullscreen`}
-          >
-            <span>View Fullscreen</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <polyline points="15 3 21 3 21 9" />
-              <polyline points="9 21 3 21 3 15" />
-              <line x1="21" y1="3" x2="14" y2="10" />
-              <line x1="3" y1="21" x2="10" y2="14" />
-            </svg>
-          </button>
         </div>
       </div>
     </div>
@@ -275,7 +443,6 @@ function Lightbox({
   onClose: () => void;
 }) {
   const overlayRef = useRef<HTMLDivElement>(null);
-
   const handleClose = useCallback(() => onClose(), [onClose]);
 
   useEffect(() => {
@@ -295,14 +462,33 @@ function Lightbox({
     <div className="lb" ref={overlayRef} onClick={handleClose}>
       <div className="lb__inner" onClick={(e) => e.stopPropagation()}>
         <button className="lb__close" onClick={handleClose} aria-label="Close">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
-            <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+          >
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
           </svg>
         </button>
+
+        {/* Lightbox phone */}
         <div className="lb__phone">
-          <div className="lb__phone-notch" />
-          <img src={feature.image} alt={feature.title} className="lb__phone-img" />
+          <div className="lb__phone-di" aria-hidden="true">
+            <div className="lb__di-cam" />
+            <div className="lb__di-spk" />
+          </div>
+          <div className="lb__screen">
+            <img src={feature.image} alt={feature.title} className="lb__phone-img" />
+          </div>
+          <div className="lb__home-bar" aria-hidden="true" />
         </div>
+
+        {/* Info */}
         <div className="lb__info">
           <span className="fc__badge">
             <span className="fc__badge-icon">{feature.badgeIcon}</span>
@@ -310,7 +496,7 @@ function Lightbox({
           </span>
           <h3 className="lb__title">{feature.title}</h3>
           <p className="lb__desc">{feature.description}</p>
-          <ul className="fc__tags">
+          <ul className="fc__tags lb__tags">
             {feature.highlights.map((h) => (
               <li key={h} className="fc__tag">
                 <span className="fc__tag-dot" />
@@ -333,8 +519,14 @@ export default function FeaturesShowcase() {
     <section
       id="features"
       className="fs"
-      style={{ backgroundColor: "#0A0A08" }}
     >
+      {/* Animated mesh gradient blobs */}
+      <div className="fs__bg-mesh" aria-hidden="true">
+        <div className="fs__blob fs__blob--1" />
+        <div className="fs__blob fs__blob--2" />
+        <div className="fs__blob fs__blob--3" />
+      </div>
+
       {/* Header */}
       <div
         ref={headerRef}

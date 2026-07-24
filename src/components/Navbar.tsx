@@ -25,13 +25,30 @@ export default function Navbar() {
           </span>
         </a>
 
-        {/* Minimal CTA */}
-        <a
-          href="#contact"
-          className="cursor-glow-target text-[9px] font-semibold tracking-[0.2em] uppercase text-warm-stone/60 border border-warm-white/10 rounded-full px-5 py-1.5 hover:text-warm-white hover:border-warm-white/25 transition-all duration-300"
-        >
-          Contact
-        </a>
+        {/* Minimal CTAs */}
+        <div className="flex items-center gap-2 sm:gap-3">
+          <a
+            href="http://103.198.9.209/app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cursor-glow-target hidden sm:inline-block text-[9px] font-semibold tracking-[0.2em] uppercase text-ember border border-ember/20 bg-ember/5 rounded-full px-4 sm:px-5 py-1.5 hover:text-warm-white hover:border-ember/50 hover:bg-ember/20 transition-all duration-300"
+          >
+            Open Web App
+          </a>
+          <a
+            href="/app-release.apk"
+            download="STS_Kiosk_App.apk"
+            className="cursor-glow-target text-[9px] font-semibold tracking-[0.2em] uppercase text-warm-stone/60 border border-warm-white/10 rounded-full px-4 sm:px-5 py-1.5 hover:text-warm-white hover:border-warm-white/25 transition-all duration-300"
+          >
+            App APK
+          </a>
+          <a
+            href="#contact"
+            className="cursor-glow-target hidden sm:inline-block text-[9px] font-semibold tracking-[0.2em] uppercase text-warm-stone/60 border border-warm-white/10 rounded-full px-4 sm:px-5 py-1.5 hover:text-warm-white hover:border-warm-white/25 transition-all duration-300"
+          >
+            Contact
+          </a>
+        </div>
       </div>
     </nav>
   );
