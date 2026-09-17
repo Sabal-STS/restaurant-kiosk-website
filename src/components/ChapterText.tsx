@@ -12,21 +12,21 @@ interface ChapterData {
 const CHAPTER_DATA: readonly ChapterData[] = [
   {
     eyebrow: "01 // THE BEST RESTAURANT SOFTWARE NEPAL",
-    headline: "NEPAL'S BEST RESTAURANT\nMANAGEMENT SOFTWARE & APP",
+    headline: "STS KIOSK — NEPAL'S BEST\nRESTAURANT SOFTWARE & SELF-ORDERING",
     description:
-      "STS RMS is the premier restaurant software in Nepal — an all-in-one RMS solution featuring self-ordering kiosk mode, waiter POS tablet app, real-time KOT, dynamic billing with VAT, recipe costing, and multi-station staff management for restaurants and cafes across Nepal.",
+      "STS Kiosk is the premier restaurant software in Nepal — featuring an advanced customer self-ordering kiosk mode, waiter POS tablet app, real-time KOT kitchen sync, NPR VAT billing, recipe costing, and standalone Windows desktop app support for restaurants and cafes across Nepal.",
   },
   {
-    eyebrow: "02 // GUEST EXPERIENCE & KIOSK",
-    headline: "FAST, FRICTIONLESS\nKIOSK ORDERING",
+    eyebrow: "02 // GUEST EXPERIENCE & SELF-ORDERING",
+    headline: "FAST, FRICTIONLESS\nCUSTOMER SELF-ORDERING",
     description:
-      "Nepal's first self-service restaurant kiosk ordering app. Customers can browse visual digital menus, customize items with modifiers and add-ons, and place instant orders. Waiters can also take table orders using the same intuitive restaurant management app.",
+      "Empower your guests with STS Kiosk's intuitive customer self-ordering interface. Customers freely browse visual menus, customize items with modifiers and toppings, and send orders directly to the kitchen. Waitstaff can also take table orders using the exact same interface.",
   },
   {
     eyebrow: "03 // UNIFIED OPERATIONS & RMS",
-    headline: "RUN YOUR RESTAURANT\nFROM ONE CENTRAL RMS",
+    headline: "RUN YOUR RESTAURANT\nFROM ONE CENTRAL PLATFORM",
     description:
-      "Why STS is rated the best RMS in Nepal: full control over dine-in and takeaway orders, NPR billing, custom categories, variation pricing, automated inventory deduction, vendor purchases, tables, and staff permissions from one single platform.",
+      "Why STS Kiosk is rated the best restaurant management software in Nepal: full control over dine-in and takeaway orders, NPR billing, custom categories, variation pricing, automated inventory deduction, vendor purchases, tables, and staff permissions.",
   },
   {
     eyebrow: "04 // REAL-TIME KOT & KITCHEN DISPLAY",

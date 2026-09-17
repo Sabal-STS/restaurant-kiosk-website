@@ -1,7 +1,7 @@
 {
-  "name": "STS RMS - Best Restaurant Software Nepal",
-  "short_name": "STS RMS",
-  "description": "The best restaurant management software (RMS) & kiosk ordering app in Nepal.",
+  "name": "STS Kiosk - Best Restaurant Software Nepal",
+  "short_name": "STS Kiosk",
+  "description": "Nepal's best restaurant management software & customer self-ordering kiosk app.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0A0A08",
