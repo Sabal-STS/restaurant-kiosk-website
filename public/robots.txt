@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sitoulatechsolution.com.np/sitemap.xml

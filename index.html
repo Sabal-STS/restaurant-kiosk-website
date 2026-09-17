@@ -1,18 +1,166 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/sts_logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="STS Kiosk — Restaurant ordering, admin navigation, order notifications, and kiosk activation shown from the real app screens." />
-    <meta property="og:title" content="STS Kiosk — Restaurant Ordering App" />
-    <meta property="og:description" content="A scroll-driven look at STS Kiosk using real app screens: Take Order, admin drawer, order notifications, and kiosk activation." />
-    <meta property="og:image" content="/sts_logo.png" />
-    <meta property="og:type" content="website" />
-    <title>STS Kiosk — Restaurant Ordering App</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/sts_logo.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0A0A08" />
+  
+  <!-- Primary Meta Tags -->
+  <title>Best Restaurant Software Nepal | STS RMS — Top Restaurant Management App & POS</title>
+  <meta name="title" content="Best Restaurant Software Nepal | STS RMS — Top Restaurant Management App & POS" />
+  <meta name="description"
+    content="STS RMS is the best restaurant software in Nepal. Complete restaurant management app with self-ordering kiosk, digital table ordering, billing & POS, real-time KOT, recipe & inventory tracking, and sales analytics for restaurants, cafes, and hospitality businesses across Nepal." />
+  <meta name="keywords"
+    content="restaurant software nepal, rms nepal, best rms, best restaurant software, restaurant management app, restaurant billing software nepal, restaurant pos nepal, best restaurant management software in nepal, cafe pos kathmandu, restaurant billing app nepal, kiosk restaurant software nepal" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="author" content="Sitoula Tech Solutions" />
+  <link rel="canonical" href="https://sitoulatechsolution.com.np/app-restaurant" />
+
+  <!-- Geo Meta Tags for Nepal SEO -->
+  <meta name="geo.region" content="NP-BA" />
+  <meta name="geo.placename" content="Kathmandu, Nepal" />
+  <meta name="geo.position" content="27.7172;85.3240" />
+  <meta name="ICBM" content="27.7172, 85.3240" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sitoulatechsolution.com.np/app-restaurant" />
+  <meta property="og:title" content="Best Restaurant Software Nepal | STS RMS — Top Restaurant Management App" />
+  <meta property="og:description"
+    content="Discover STS RMS: The best restaurant management software and ordering app in Nepal. Self-service kiosk, POS, live kitchen display, and automated stock deduction." />
+  <meta property="og:image" content="https://sitoulatechsolution.com.np/sts_logo.png" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="STS RMS Nepal" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://sitoulatechsolution.com.np/app-restaurant" />
+  <meta property="twitter:title" content="Best Restaurant Software Nepal | STS RMS" />
+  <meta property="twitter:description"
+    content="Nepal's #1 restaurant software & management app. Fast billing, kiosk mode, inventory, KOT sync, and analytics." />
+  <meta property="twitter:image" content="https://sitoulatechsolution.com.np/sts_logo.png" />
+
+  <!-- Structured Data: SoftwareApplication & Restaurant Management System -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "STS Restaurant Management Software (STS RMS)",
+    "operatingSystem": "Android, Web, iOS, Windows",
+    "applicationCategory": "BusinessApplication",
+    "applicationSubCategory": "Restaurant Management System & POS",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "ratingCount": "128",
+      "bestRating": "5"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "NPR",
+      "description": "Free demo & customized deployment across Nepal"
+    },
+    "description": "STS RMS is the premier restaurant management software and restaurant ordering app in Nepal, featuring self-ordering kiosk mode, waiter POS, live KOT dispatch, and automated recipe/inventory tracking.",
+    "creator": {
+      "@type": "Organization",
+      "name": "Sitoula Tech Solutions",
+      "url": "https://sitoulatechsolution.com.np"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: LocalBusiness / Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Sitoula Tech Solutions - STS RMS Nepal",
+    "image": "https://sitoulatechsolution.com.np/sts_logo.png",
+    "@id": "https://sitoulatechsolution.com.np",
+    "url": "https://sitoulatechsolution.com.np",
+    "telephone": "+9779862041915",
+    "priceRange": "NPR",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kathmandu",
+      "addressRegion": "Bagmati",
+      "addressCountry": "NP"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 27.7172,
+      "longitude": 85.3240
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "09:00",
+      "closes": "20:00"
+    },
+    "sameAs": [
+      "https://sitoulatechsolution.com.np"
+    ]
+  }
+  </script>
+
+  <!-- Structured Data: FAQPage for Search Rich Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the best restaurant software in Nepal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "STS RMS by Sitoula Tech Solutions is widely regarded as the best restaurant software in Nepal. It combines modern self-ordering kiosks, staff tablet ordering, fast billing, real-time KOT sync, dynamic modifier & recipe management, and accurate inventory tracking designed specifically for restaurants and cafes in Nepal."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is STS RMS the best RMS for restaurants and cafes in Nepal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "STS RMS offers an all-in-one unified system: Dine-In & Takeaway ordering, station-level authentication, per-variant inventory reduction in grams/pieces, VAT billing in NPR, table-side waiter ordering, and customer-facing touch kiosks."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does STS RMS offer a mobile restaurant management app?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, STS RMS provides an Android APK app and cross-platform web app allowing restaurant managers, waiters, and kitchen staff to manage orders, billing, and inventory directly from mobile devices and tablets."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I get a free demo of STS RMS in Nepal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can request a free demo directly via WhatsApp at +977-9862041915 or test the online web app at sitoulatechsolution.com.np/app-restaurant."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
 </html>

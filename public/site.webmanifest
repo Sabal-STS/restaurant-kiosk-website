@@ -1,0 +1,16 @@
+{
+  "name": "STS RMS - Best Restaurant Software Nepal",
+  "short_name": "STS RMS",
+  "description": "The best restaurant management software (RMS) & kiosk ordering app in Nepal.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A0A08",
+  "theme_color": "#F5A623",
+  "icons": [
+    {
+      "src": "/sts_logo.png",
+      "sizes": "192x192 512x512",
+      "type": "image/png"
+    }
+  ]
+}

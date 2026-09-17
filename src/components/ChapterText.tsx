@@ -11,34 +11,34 @@ interface ChapterData {
 
 const CHAPTER_DATA: readonly ChapterData[] = [
   {
-    eyebrow: "01 // THE PLATFORM",
-    headline: "THE RESTAURANT\nORDERING APP",
+    eyebrow: "01 // THE BEST RESTAURANT SOFTWARE NEPAL",
+    headline: "NEPAL'S BEST RESTAURANT\nMANAGEMENT SOFTWARE & APP",
     description:
-      "The end to end restaurant ordering, inventory, dynamic billing, advance menu management, and staff management solution for busy restaurants and cafe. Including a Kiosk mode for self ordering and a waiter mode for staff ordering.",
+      "STS RMS is the premier restaurant software in Nepal — an all-in-one RMS solution featuring self-ordering kiosk mode, waiter POS tablet app, real-time KOT, dynamic billing with VAT, recipe costing, and multi-station staff management for restaurants and cafes across Nepal.",
   },
   {
-    eyebrow: "02 // GUEST EXPERIENCE",
-    headline: "FAST, FRICTIONLESS\nORDERING",
+    eyebrow: "02 // GUEST EXPERIENCE & KIOSK",
+    headline: "FAST, FRICTIONLESS\nKIOSK ORDERING",
     description:
-      "Kiosk allows customers to browse the menu, customize items with variations and modifiers, and place orders with a few taps. Staff can also take orders directly from the table using the same seamless interface.",
+      "Nepal's first self-service restaurant kiosk ordering app. Customers can browse visual digital menus, customize items with modifiers and add-ons, and place instant orders. Waiters can also take table orders using the same intuitive restaurant management app.",
   },
   {
-    eyebrow: "03 // UNIFIED OPERATIONS",
-    headline: "RUN THE RESTAURANT\nFROM ONE PLACE",
+    eyebrow: "03 // UNIFIED OPERATIONS & RMS",
+    headline: "RUN YOUR RESTAURANT\nFROM ONE CENTRAL RMS",
     description:
-      "The intuitive dashboard gives you full control over orders, billing, menu items, categories, variations, modifiers, stock, inventory, vendors, tables, kiosks, and staff management—all from one centralized platform.",
+      "Why STS is rated the best RMS in Nepal: full control over dine-in and takeaway orders, NPR billing, custom categories, variation pricing, automated inventory deduction, vendor purchases, tables, and staff permissions from one single platform.",
   },
   {
-    eyebrow: "04 // REAL-TIME SYNC",
-    headline: "ORDER ALERTS\nON ARRIVAL",
+    eyebrow: "04 // REAL-TIME KOT & KITCHEN DISPLAY",
+    headline: "INSTANT KOT ALERTS\n& KITCHEN SYNC",
     description:
-      "Orders are sent instantly to the kitchen display system. The kitchen team can view and manage items, mark them as ready, and trigger notifications for waiters to serve and complete the order in real-time.",
+      "Orders placed via kiosk or the waiter mobile app trigger instantaneous kitchen order tickets (KOT). The kitchen display system updates cook status in real-time, notifying waitstaff when food is ready to serve without delays.",
   },
   {
-    eyebrow: "05 // ACCESS CONTROL",
-    headline: "STATION-LEVEL\nAUTHENTICATION",
+    eyebrow: "05 // ENTERPRISE SECURITY & TERMINAL ACCESS",
+    headline: "STATION-LEVEL\nAUTHENTICATION & CONTROL",
     description:
-      "Every terminal starts in a secure 'Kiosk Inactive' state. Staff activate the system using unique credentials—username, password, company code, and kiosk code—ensuring secure access before any station can process orders.",
+      "Every POS terminal and kiosk starts secured in an inactive state. Staff authenticate with unique credentials, company codes, and kiosk PINs — keeping your restaurant data, sales reports, and billing strictly protected.",
   },
 ] as const;
 

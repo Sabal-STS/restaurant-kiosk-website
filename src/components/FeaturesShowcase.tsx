@@ -534,20 +534,19 @@ export default function FeaturesShowcase() {
       >
         <div className="fs__kicker-row">
           <div className="fs__kicker-line" />
-          <span className="fs__kicker">Platform Screenshots</span>
+          <span className="fs__kicker">Nepal's Best Restaurant Management Software & App</span>
           <div className="fs__kicker-line" />
         </div>
         <h2 className="fs__heading">
           Every screen,{" "}
-          <span className="fs__heading-dim">designed to perform.</span>
+          <span className="fs__heading-dim">built for Nepal's busy restaurants.</span>
         </h2>
         <p className="fs__sub">
-          Explore all 10 screens of the STS Kiosk platform. Tap any screenshot
-          for a closer look.
+          Explore all 10 core modules of STS RMS: fast billing in NPR, table KOT, live inventory, recipe costing, and kiosk ordering designed for restaurants and cafes across Nepal.
         </p>
         <div className="fs__count-badge">
           <span className="fs__count-number">10</span>
-          <span className="fs__count-label">Screens</span>
+          <span className="fs__count-label">RMS Modules</span>
         </div>
       </div>
 

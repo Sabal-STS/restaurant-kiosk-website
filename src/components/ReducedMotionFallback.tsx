@@ -9,60 +9,60 @@ import FeaturesShowcase from "./FeaturesShowcase";
 
 const sections = [
   {
-    eyebrow: "STS Kiosk",
-    headline: "The restaurant ordering app",
+    eyebrow: "STS RMS Nepal",
+    headline: "Best restaurant management software & ordering app in Nepal",
     description:
-      "A kiosk and admin interface for taking dine-in or takeaway orders, managing restaurant operations, receiving order alerts, and activating each station before use.",
+      "A complete restaurant software solution for Nepal. Features self-ordering kiosk mode, waiter POS app, NPR VAT billing, real-time KOT display, recipe costing, and station security.",
     image: takeOrderScreen,
-    alt: "STS Kiosk Take Order screen",
+    alt: "STS RMS Best Restaurant Software Nepal Take Order screen",
   },
   {
-    eyebrow: "Take Order",
-    headline: "Dine-in, takeaway, tables, payment, and cart",
+    eyebrow: "Fast Order Taking & POS",
+    headline: "Dine-in, takeaway, table picker, cash & QR payments",
     description:
-      "The Take Order screen shows Dine In and Takeaway, table selection, Cash payment, menu categories, cart quantity controls, subtotal, and Place Order.",
+      "The intuitive POS screen allows restaurant staff in Nepal to manage dine-in and takeaway tables, track cart subtotals, apply discounts, and fire orders instantly.",
     image: takeOrderScreen,
-    alt: "Take Order screen with table picker and cart",
+    alt: "Restaurant management app Nepal take order screen with table picker and cart",
   },
   {
-    eyebrow: "Everything Managed",
-    headline: "Restaurant operations in the drawer",
+    eyebrow: "Unified Restaurant Management System",
+    headline: "Complete RMS operations in one centralized drawer",
     description:
-      "The drawer exposes Dashboard, Orders, Billing, Menu Catalog, Inventory Management, Purchasing, Restaurant Setup, and Sign out.",
+      "Everything a restaurant owner in Nepal needs: Dashboard analytics, Live Orders, Billing, Menu Catalog, Inventory Management, Purchasing, and Setup.",
     image: drawerTopScreen,
-    alt: "STS Kiosk navigation drawer top",
+    alt: "Best RMS Nepal navigation drawer menu",
   },
   {
-    eyebrow: "Menu, Inventory, Purchasing, Setup",
-    headline: "The second drawer capture shows the rest",
+    eyebrow: "Menu, Recipes, Stock & Staff",
+    headline: "Full recipe costing and automated inventory control",
     description:
-      "Menu Items, Categories, Variations, Modifiers, Stock & Inventory, Measurement Units, Purchases, Vendors, Tables, Kiosks, and Staff are visible across the two drawer screenshots.",
+      "Categories, variations, per-item ingredient recipes, unit deductions (grams/pieces), vendor purchases, table layouts, and staff access roles.",
     image: drawerBottomScreen,
-    alt: "STS Kiosk navigation drawer lower items",
+    alt: "Restaurant software Nepal inventory and staff management",
   },
   {
-    eyebrow: "Real-Time Orders",
-    headline: "Orders arrive as alerts",
+    eyebrow: "Live Kitchen Alerts & KOT",
+    headline: "Orders arrive as instant kitchen notifications",
     description:
-      "The push notification shows STS Kiosk, New Order, order number, status, table, and rupee amount.",
+      "Real-time kitchen order tickets (KOT) with table numbers, modifier notes, and order timers keep cooking staff synchronized with zero delays.",
     image: pushNotificationScreen,
-    alt: "STS Kiosk live order push notification",
+    alt: "Restaurant software live KOT push notification Nepal",
   },
   {
-    eyebrow: "Notifications",
-    headline: "Orders remain visible in-app",
+    eyebrow: "Centralized Order Status",
+    headline: "Track preparing, ready, and completed orders",
     description:
-      "The notifications list shows order number, status, type, table, amount, time, Mark all read, and Clear.",
+      "Live order pipelines display elapsed time, table number, order amount in NPR, and instant stage transitions for smooth kitchen-to-table service.",
     image: notificationListScreen,
-    alt: "STS Kiosk notifications list",
+    alt: "Restaurant management app live order status screen",
   },
   {
-    eyebrow: "Secure by Design",
-    headline: "Each station starts inactive",
+    eyebrow: "Secure Multi-Station Terminals",
+    headline: "Station-level credential authorization",
     description:
-      "The Kiosk Inactive screen requires username, password, company code, and kiosk code before Activate Kiosk.",
+      "Each ordering kiosk and POS station requires secure authentication before processing orders, protecting your restaurant's billing and business data.",
     image: kioskInactiveScreen,
-    alt: "STS Kiosk inactive activation screen",
+    alt: "STS RMS secure kiosk terminal activation screen",
   },
 ];
 
