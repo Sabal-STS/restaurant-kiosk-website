@@ -6,33 +6,34 @@ on:
       - main
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: npm
+      # The site is plain HTML, CSS and JavaScript. There is no build step:
+      # the files in the repo root are exactly what gets served.
+      - name: Stage site files
+        run: |
+          set -e
+          mkdir -p site
+          cp index.html site/
+          cp robots.txt sitemap.xml site.webmanifest site/
+          cp google3ae62cd7632ae95d.html site/
+          cp -r assets site/
+          echo "Staged for deploy:"
+          find site -type f | sort
 
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build
-        run: npm run build
-
-      - name: Upload build to VPS
+      - name: Upload site to VPS
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
-          source: "dist/*"
+          source: "site/*"
           target: "/tmp/sts-kiosk-website"
           strip_components: 1
 
@@ -46,13 +47,12 @@ jobs:
           script: |
             set -e
 
-             mkdir -p /var/www/html/sts-kiosk-website
+            mkdir -p /var/www/html/sts-kiosk-website
 
+            rm -rf /var/www/html/sts-kiosk-website/*
 
-             rm -rf /var/www/html/sts-kiosk-website/*
+            cp -r /tmp/sts-kiosk-website/* /var/www/html/sts-kiosk-website/
 
-             cp -r /tmp/sts-kiosk-website/* /var/www/html/sts-kiosk-website/
+            rm -rf /tmp/sts-kiosk-website
 
-             rm -rf /tmp/sts-kiosk-website
-
-             sudo systemctl reload nginx
+            sudo systemctl reload nginx

@@ -1,209 +1,1753 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="/sts_logo.png" />
-  <link rel="manifest" href="/site.webmanifest" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0A0A08" />
-  
-  <!-- Primary Meta Tags -->
-  <title>STS Kiosk — Best Restaurant Software Nepal | Self-Ordering Kiosk & RMS App</title>
-  <meta name="title" content="STS Kiosk — Best Restaurant Software Nepal | Self-Ordering Kiosk & RMS App" />
-  <!-- <meta name="google-site-verification" content="google3ae62cd7632ae95d" /> -->
-  <meta name="description"
-    content="STS Kiosk is Nepal's premier restaurant software with customer self-ordering kiosk mode, waiter POS ordering, instant KOT, recipe & inventory tracking, and Windows desktop support for restaurants, cafes, and hospitality venues across Nepal." />
-  <meta name="keywords"
-    content="sts kiosk, restaurant software nepal, rms nepal, best rms, best restaurant software, restaurant management app, customer self ordering kiosk nepal, restaurant billing software nepal, restaurant pos nepal, cafe pos kathmandu, restaurant kiosk software nepal" />
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-  <meta name="author" content="Sitoula Tech Solutions" />
-  <link rel="canonical" href="https://sitoulatechsolution.com.np/app-restaurant" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>STS · Restaurant Management System for Nepal</title>
+<meta name="description" content="Complete restaurant management for Nepal: orders, kitchen tickets, IRD CBMS billing, recipes and stock, purchases, vendors, tables and rooms. Self-service kiosk available as an add-on module.">
+<meta name="keywords" content="sts kiosk, restaurant software nepal, rms nepal, restaurant management app, customer self ordering kiosk nepal, restaurant billing software nepal, restaurant pos nepal, cafe pos kathmandu, cbms billing nepal, ird billing restaurant">
+<meta name="theme-color" content="#0B0A08">
+<meta name="author" content="Sitoula Tech Solutions">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="canonical" href="https://sitoulatechsolution.com.np/app-restaurant">
+<link rel="manifest" href="site.webmanifest">
+<link rel="apple-touch-icon" href="assets/sts_logo.png">
+<meta name="google-site-verification" content="mAEkWSEGOGTcphYYE0gZ7Dxg45FhEUCLNOXOyzf69Dw">
 
-  <!-- Geo Meta Tags for Nepal SEO -->
-  <meta name="geo.region" content="NP-BA" />
-  <meta name="geo.placename" content="Kathmandu, Nepal" />
-  <meta name="geo.position" content="27.7172;85.3240" />
-  <meta name="ICBM" content="27.7172, 85.3240" />
+<!-- Nepal local SEO -->
+<meta name="geo.region" content="NP-BA">
+<meta name="geo.placename" content="Kathmandu, Nepal">
+<meta name="geo.position" content="27.7172;85.3240">
+<meta name="ICBM" content="27.7172, 85.3240">
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://sitoulatechsolution.com.np/app-restaurant" />
-  <meta property="og:title" content="STS Kiosk — Best Restaurant Software Nepal | Self-Ordering Kiosk & RMS" />
-  <meta property="og:description"
-    content="STS Kiosk: Nepal's leading restaurant management system with customer self-ordering kiosk mode, POS, live kitchen display, and Windows desktop application." />
-  <meta property="og:image" content="https://sitoulatechsolution.com.np/sts_logo.png" />
-  <meta property="og:locale" content="en_US" />
-  <meta property="og:site_name" content="STS Kiosk Nepal" />
+<!-- DEPLOY STEP: patch og:url and og:image with the live absolute URL before zipping -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="STS Kiosk">
+<meta property="og:title" content="STS · Restaurant Management System for Nepal">
+<meta property="og:description" content="Orders, kitchen tickets, IRD CBMS billing, stock and vendors. One system, built in Nepal. Self-service kiosk as an add-on.">
+<meta property="og:url" content="https://REPLACE-AT-DEPLOY/">
+<meta property="og:image" content="https://REPLACE-AT-DEPLOY/assets/hero-ending.jpg">
+<meta name="twitter:card" content="summary_large_image">
 
-  <meta name="google-site-verification" content="mAEkWSEGOGTcphYYE0gZ7Dxg45FhEUCLNOXOyzf69Dw" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230B0A08'/%3E%3Crect x='7.5' y='6' width='13.5' height='13.5' fill='none' stroke='%23F0E840' stroke-width='2.6'/%3E%3Crect x='15' y='13.5' width='11.5' height='11.5' fill='%23F0E840'/%3E%3C/svg%3E">
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://sitoulatechsolution.com.np/app-restaurant" />
-  <meta property="twitter:title" content="STS Kiosk — Best Restaurant Software Nepal" />
-  <meta property="twitter:description"
-    content="Nepal's top restaurant software & self-ordering kiosk. Fast billing, kiosk mode, inventory, KOT sync, and Windows desktop app." />
-  <meta property="twitter:image" content="https://sitoulatechsolution.com.np/sts_logo.png" />
-
-  <!-- Structured Data: SoftwareApplication & Restaurant Management System -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "STS Kiosk - Restaurant Management Software & Self-Ordering System",
-    "operatingSystem": "Windows Desktop, Web, Android, iOS",
-    "applicationCategory": "BusinessApplication",
-    "applicationSubCategory": "Restaurant Management System & Self-Ordering Kiosk",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "ratingCount": "128",
-      "bestRating": "5"
-    },
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "NPR",
-      "description": "Free demo & customized deployment across Nepal"
-    },
-    "description": "STS Kiosk is the premier restaurant management software and customer self-ordering kiosk system in Nepal, featuring standalone Windows desktop application, live KOT dispatch, and automated recipe/inventory tracking.",
-    "creator": {
-      "@type": "Organization",
-      "name": "Sitoula Tech Solutions",
-      "url": "https://sitoulatechsolution.com.np"
-    }
-  }
-  </script>
-
-  <!-- Structured Data: LocalBusiness / Organization -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Sitoula Tech Solutions - STS Kiosk Nepal",
-    "image": "https://sitoulatechsolution.com.np/sts_logo.png",
-    "@id": "https://sitoulatechsolution.com.np",
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "STS Restaurant Management System",
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "Restaurant Management System with optional self-ordering kiosk",
+  "operatingSystem": "Windows, Web",
+  "description": "Restaurant self-service kiosk, waiter POS, live kitchen tickets, inventory and IRD CBMS billing. One system, built in Nepal.",
+  "url": "https://sitoulatechsolution.com.np/app-restaurant",
+  "softwareHelp": "https://wa.me/9779862041915",
+  "featureList": [
+    "Customer self-ordering kiosk",
+    "Waiter POS ordering",
+    "Kitchen order tickets with local printer agent",
+    "CBMS and IRD billing synchronisation",
+    "Recipe-linked stock deduction",
+    "Purchase and vendor tracking",
+    "Table and room management"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "Sitoula Tech Solutions",
     "url": "https://sitoulatechsolution.com.np",
-    "telephone": "+9779862041915",
-    "priceRange": "NPR",
+    "telephone": "+977-9862041915",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Kathmandu",
-      "addressRegion": "Bagmati",
       "addressCountry": "NP"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 27.7172,
-      "longitude": 85.3240
-    },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-        "Sunday"
-      ],
-      "opens": "09:00",
-      "closes": "20:00"
-    },
-    "sameAs": [
-      "https://sitoulatechsolution.com.np"
-    ]
+    }
   }
-  </script>
+}
+</script>
 
-  <!-- Structured Data: FAQPage for Search Rich Snippets -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is STS Kiosk and why is it the best restaurant software in Nepal?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "STS Kiosk by Sitoula Tech Solutions is the leading restaurant software in Nepal. It combines modern customer self-ordering touch kiosks with full restaurant management (RMS): staff POS, fast NPR billing, instant KOT sync, recipe costing, and Windows desktop app support."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How does the customer self-ordering kiosk feature work?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Customers can independently browse high-resolution digital menus, select item variations and modifiers, place dine-in or takeaway orders, and send them directly to the kitchen without waiting in line."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is there a Windows Desktop application for STS Kiosk?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, STS Kiosk is available as a dedicated Windows desktop application (.exe) for restaurant counter POS terminals and touchscreen kiosk machines, as well as an interactive web app."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How can I get a free demo of STS Kiosk in Nepal?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "You can request a free demo directly via WhatsApp at +977-9862041915 or test the online web app at sitoulatechsolution.com.np/app-restaurant."
-        }
-      }
-    ]
-  }
-  </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Hanken+Grotesk:wght@400;500&family=JetBrains+Mono:wght@500&display=swap">
+
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --canvas:#0B0A08;
+  --canvas-2:#100E0A;
+  --panel:#16130D;
+  --panel-2:#1C1811;
+  --line:#2A2419;
+  --line-strong:#5A4E33;
+  --border-ui:#7A6842;
+  --accent:#F0E840;
+  --accent-hover:#F6F26A;
+  --accent-warm:#FFD84A;
+  --accent-muted:rgba(240,232,64,.16);
+  --text-primary:#F5F1E6;
+  --text-secondary:#B0A78F;
+  --display:"Bricolage Grotesque",Georgia,serif;
+  --body:"Hanken Grotesk",system-ui,-apple-system,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+
+  /* refined easing curves — the difference between "smooth" and "buttery" is here */
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --ease-soft:cubic-bezier(.4,0,.2,1);
+  --ease-out-expo:cubic-bezier(.16,1,.3,1);
+  --ease-out-back:cubic-bezier(.34,1.35,.64,1);
+  --ease-out-quart:cubic-bezier(.25,1,.5,1);
+  --spring:cubic-bezier(.5,1.6,.4,1);
+
+  --tshadow:0 1px 2px rgba(5,5,10,.95),0 3px 12px rgba(5,5,10,.78),0 10px 44px rgba(5,5,10,.8);
+  --glow-accent:0 0 40px -8px rgba(240,232,64,.45);
+  --maxw:1180px;
+
+  /* cursor light coordinates, updated by JS */
+  --mx:50vw;
+  --my:50vh;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html,body{overflow-x:hidden;overflow-x:clip}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--canvas);color:var(--text-primary);
+  font-family:var(--body);font-weight:400;font-size:17px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1.02;letter-spacing:-.025em;margin:0}
+p{margin:0}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+
+/* selection carries the brand */
+::selection{background:rgba(240,232,64,.32);color:#141006}
+
+.skip{position:absolute;left:-9999px;top:0;z-index:999;background:var(--accent);color:#141006;padding:.7rem 1.1rem;border-radius:0 0 8px 0;font-weight:500}
+.skip:focus{left:0}
+
+.wrap{width:min(100% - 2.5rem,var(--maxw));margin-inline:auto}
+.kicker{font-family:var(--mono);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin:0 0 1.1rem}
+.lede{color:var(--text-secondary);font-size:1.06rem;max-width:62ch}
+
+/* ============ FIXED ENVIRONMENT LAYER ============ */
+.env{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.env::before{
+  content:"";position:absolute;inset:-25%;
+  background:
+    radial-gradient(ellipse 50% 40% at 28% 22%,rgba(240,232,64,.055),transparent 62%),
+    radial-gradient(ellipse 46% 44% at 76% 74%,rgba(224,232,80,.038),transparent 64%);
+  animation:envdrift 96s var(--ease-soft) infinite alternate;animation-delay:-31s;
+}
+.env i{position:absolute;left:50%;top:-18vh;width:min(1180px,128vw);height:74vh;pointer-events:none;
+  transform:translate3d(-50%,calc(var(--sp,0) * 118vh),0);
+  background:radial-gradient(ellipse 50% 50% at 50% 50%,rgba(240,232,64,.062),rgba(224,232,80,.024) 46%,transparent 72%)}
+.env::after{
+  content:"";position:absolute;inset:0;opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.055'/%3E%3C/svg%3E");
+}
+@keyframes envdrift{from{transform:translate3d(-2.2%,-1.6%,0) scale(1.05)}to{transform:translate3d(2.2%,1.8%,0) scale(1.12)}}
+
+/* ============ CURSOR SPOTLIGHT — the room lights follow you ============ */
+.spotlight{position:fixed;inset:0;z-index:2;pointer-events:none;mix-blend-mode:screen;opacity:0;
+  transition:opacity .8s var(--ease)}
+.spotlight.on{opacity:1}
+.spotlight::before{content:"";position:absolute;inset:0;
+  background:radial-gradient(circle 380px at var(--mx) var(--my),rgba(240,232,64,.09),rgba(240,232,64,.03) 40%,transparent 70%)}
+@media (hover:none),(pointer:coarse){.spotlight{display:none}}
+
+.page{position:relative;z-index:1}
+
+/* ============ SCROLL SPINE (signature, page-wide) ============ */
+.spine{position:fixed;left:26px;top:0;bottom:0;width:1px;z-index:3;pointer-events:none;background:var(--line)}
+.spine i{position:absolute;left:0;top:0;width:100%;height:0;background:linear-gradient(180deg,rgba(240,232,64,.15),var(--accent));display:block;box-shadow:0 0 8px rgba(240,232,64,.35)}
+.spine b{position:absolute;left:-2.5px;width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px rgba(240,232,64,.75);top:0;display:block;
+  transition:top .05s linear}
+@media (max-width:1100px){.spine{display:none}}
+
+/* ============ NAV ============ */
+.nav{position:fixed;inset:0 0 auto;z-index:40;padding:.6rem 0;transition:background .55s var(--ease-out-expo),backdrop-filter .55s var(--ease-out-expo),border-color .55s var(--ease-out-expo);border-bottom:1px solid transparent}
+.nav.solid{background:rgba(11,10,8,.78);backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);border-bottom-color:var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:1.4rem}
+.brand{display:flex;align-items:center;gap:.6rem;font-family:var(--display);font-weight:800;font-size:1.02rem;letter-spacing:-.02em;text-decoration:none;white-space:nowrap}
+.brand svg{width:26px;height:26px;flex:0 0 auto}
+.brandmark{height:42px;width:auto;flex:0 0 auto;display:block;transition:filter .5s var(--ease)}
+.brand:hover .brandmark{filter:drop-shadow(0 0 12px rgba(240,232,64,.4))}
+.brand-foot img{height:128px;width:auto;display:block}
+@media (max-width:560px){.brandmark{height:34px}}
+
+/* once every step is lit, the ring keeps turning */
+.pad.ready .pf,.pad.done .pf{animation:spin 2.8s linear infinite;transform-origin:66px 66px}
+@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.pad.ready{border-color:var(--accent);color:var(--accent)}
+.pad.ready .pf{stroke-dasharray:96 300}
+.pad.done{box-shadow:0 0 0 1px var(--accent),0 0 34px -6px rgba(240,232,64,.45)}
+
+.navlinks{display:flex;gap:1.5rem;margin-left:auto;align-items:center}
+.navlinks a{font-size:.88rem;color:var(--text-secondary);text-decoration:none;position:relative;transition:color .35s var(--ease)}
+.navlinks a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:left center;transition:transform .45s var(--ease-out-expo)}
+.navlinks a:not(.btn):hover{color:var(--text-primary)}
+.navlinks a:not(.btn):hover::after{transform:scaleX(1)}
+@media (max-width:900px){.navlinks a:not(.btn){display:none}.navlinks{margin-left:auto}}
+@media (max-width:560px){
+  .navlinks .btn-ghost{display:none}
+  .navlinks .btn{white-space:nowrap;padding:.62rem 1rem;font-size:.86rem}
+  .nav .wrap{gap:.75rem}
+}
+
+/* ============ BUTTONS — with magnetic pull, glow halo, and shine ============ */
+.btn{
+  position:relative;
+  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+  font-family:var(--body);font-weight:500;font-size:.93rem;text-decoration:none;
+  padding:.72rem 1.3rem;border-radius:999px;border:1px solid transparent;cursor:pointer;
+  transition:background .35s var(--ease-out-expo),color .35s var(--ease-out-expo),border-color .35s var(--ease-out-expo),transform .5s var(--spring),box-shadow .5s var(--ease-out-expo);
+  text-shadow:none;overflow:hidden;isolation:isolate;
+}
+.btn-primary{background:var(--accent);color:#141006;font-weight:500;box-shadow:0 0 0 rgba(240,232,64,0)}
+.btn-primary:hover{background:var(--accent-hover);transform:translateY(-2px) scale(1.02);box-shadow:0 14px 40px -12px rgba(240,232,64,.55),0 0 0 1px rgba(255,255,255,.05) inset}
+/* light sweep across the button on hover */
+.btn-primary::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.35) 50%,transparent 70%);transform:translateX(-120%);transition:transform .9s var(--ease-out-expo)}
+.btn-primary:hover::before{transform:translateX(120%)}
+
+.btn-ghost{border-color:var(--border-ui);color:var(--text-primary);background:transparent}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px);box-shadow:0 8px 28px -10px rgba(240,232,64,.4)}
+
+.navlinks a.btn-primary{color:#141006}
+.navlinks a.btn-ghost{color:var(--text-primary)}
+.navlinks a.btn-ghost:hover{color:var(--accent)}
+@media (pointer:coarse){.btn{min-height:44px;display:inline-flex;align-items:center;justify-content:center}}
+
+/* magnetic pull applied by JS */
+.btn-primary,.btn-ghost{transform:translate3d(var(--mgx,0px),var(--mgy,0px),0)}
+.btn-primary:hover,.btn-ghost:hover{transform:translate3d(var(--mgx,0px),calc(var(--mgy,0px) - 2px),0)}
+
+/* ============ HERO ============ */
+.hero{position:relative;height:600vh}
+.stage{position:sticky;top:0;height:100vh;overflow:hidden;background:#0A0906}
+.stage video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.1s var(--ease-out-expo);will-change:transform;transform:translateZ(0)}
+.stage.video-ready video{opacity:1}
+.poster{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1s var(--ease-out-expo)}
+.poster.on{opacity:1}
+.scrim{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 120% 90% at 50% 45%,rgba(10,10,18,0) 35%,rgba(10,10,18,.62) 100%)}
+.vignette{position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 220px 80px rgba(6,6,4,.72)}
+
+/* loading ring */
+.ring{position:absolute;right:2rem;bottom:2rem;width:48px;height:48px;color:var(--accent);opacity:.9;transform:rotate(-90deg)}
+.ring circle{transition:stroke-dashoffset .18s linear}
+.cue{position:absolute;right:2rem;bottom:2rem;width:48px;height:48px;color:var(--accent);opacity:.75;animation:bob 2.6s var(--ease-soft) infinite;animation-delay:-.8s}
+@keyframes bob{0%,100%{transform:translateY(-4px)}50%{transform:translateY(4px)}}
+
+/* caption bands */
+.bands{position:absolute;inset:0;pointer-events:none}
+.band{position:absolute;top:0;bottom:0;width:100%;opacity:0;display:flex;align-items:center;text-shadow:var(--tshadow)}
+.band .inner{position:relative;width:min(100% - 3rem,var(--maxw));margin-inline:auto;display:flex}
+.band .col{width:min(430px,42vw)}
+.band-left .col{margin-right:auto}
+.band-right .col{margin-left:auto;text-align:right}
+.band-mid{align-items:flex-start;padding-top:19vh}
+.band-mid .inner{justify-content:center}
+.band-mid .col{width:min(680px,88vw);text-align:center}
+
+.band::before{content:"";position:absolute;inset:-4%;pointer-events:none;opacity:calc(.25 + .75*var(--k,1))}
+.band-left::before{background:radial-gradient(ellipse 46% 60% at 22% 50%,rgba(5,5,10,.70) 0%,rgba(5,5,10,.46) 46%,rgba(5,5,10,0) 76%)}
+.band-right::before{background:radial-gradient(ellipse 46% 60% at 78% 50%,rgba(5,5,10,.70) 0%,rgba(5,5,10,.46) 46%,rgba(5,5,10,0) 76%)}
+.band-mid::before{background:radial-gradient(ellipse 62% 46% at 50% 30%,rgba(5,5,10,.72) 0%,rgba(5,5,10,.48) 48%,rgba(5,5,10,0) 78%)}
+.band.deep-l::before{background:radial-gradient(ellipse 58% 72% at 24% 50%,rgba(4,4,8,.93) 0%,rgba(4,4,8,.80) 40%,rgba(4,4,8,.42) 62%,rgba(4,4,8,0) 84%)}
+.band.deep-r::before{background:radial-gradient(ellipse 58% 72% at 76% 50%,rgba(4,4,8,.93) 0%,rgba(4,4,8,.80) 40%,rgba(4,4,8,.42) 62%,rgba(4,4,8,0) 84%)}
+
+.band h2,.band h1{font-size:clamp(2rem,4.6vw,3.5rem);margin-bottom:.85rem}
+.band .sub{color:#E4DDCB;font-size:clamp(.98rem,1.35vw,1.14rem);line-height:1.5;max-width:34ch}
+.band-right .sub{margin-left:auto}
+.band-mid .sub{margin-inline:auto;max-width:48ch}
+.band .cta{display:flex;gap:.8rem;justify-content:center;margin-top:1.8rem;flex-wrap:wrap}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* text choreography — refined with more generous easing */
+.w{display:inline-block;white-space:pre}
+.c{display:inline-block;will-change:transform,opacity}
+.e-drift .w{--kc:clamp(0,(var(--k,0) - var(--th,0))*2.8,1);opacity:var(--kc);transform:translate3d(0,calc((1 - var(--kc)) * -30px),0)}
+.e-grid .c{--kc:clamp(0,(var(--k,0) - var(--th,0))*2.6,1);opacity:var(--kc);transform:translate3d(calc((1 - var(--kc)) * var(--jx,0px)),0,0)}
+.e-punch .w{
+  --kc:clamp(0,(var(--k,0) - var(--th,0))*3,1);
+  --ks:clamp(0,(var(--k,0) - var(--th,0) - var(--sd,.1))*var(--ss,3.2),1);
+  opacity:var(--kc);
+  transform:scale(calc(0.62 + (0.38 + var(--ov,.12))*var(--kc) - var(--ov,.12)*var(--ks)))
+}
+.e-punch .w.em{--ov:.24;--sd:.16;--ss:2.6}
+.e-rise .w{--kc:clamp(0,(var(--k,0) - var(--th,0))*2.9,1);opacity:var(--kc);transform:translate3d(0,calc((1 - var(--kc)) * 34px),0)}
+.band-mid .sub{opacity:var(--ks-sub,0);transform:translate3d(0,calc((1 - var(--ks-sub,0)) * 16px),0)}
+.band-mid .cta{opacity:var(--ks-cta,0);transform:translate3d(0,calc((1 - var(--ks-cta,0)) * 16px),0)}
+
+/* ============ STATIC HERO (phones, reduced motion) ============ */
+.static-hero{display:none;position:relative;min-height:100svh;align-items:center;padding:7rem 0 4rem;overflow:hidden}
+.static-hero .shot{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.5}
+.static-hero .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,10,8,.78) 0%,rgba(11,10,8,.5) 42%,rgba(11,10,8,.95) 100%)}
+.static-hero .wrap{position:relative}
+.static-hero h1{font-size:clamp(2.35rem,9vw,3.4rem);margin-bottom:1rem;text-shadow:var(--tshadow)}
+.static-hero .sub{color:#E4DDCB;max-width:38ch;text-shadow:var(--tshadow)}
+.static-hero .cta{display:flex;gap:.75rem;margin-top:2rem;flex-wrap:wrap}
+
+/* ============ SECTIONS ============ */
+.sec{position:relative;padding:clamp(5rem,11vw,9rem) 0}
+.sec-alt{background:var(--canvas-2)}
+.rule{height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent)}
+h2.big{font-size:clamp(1.95rem,4.3vw,3.05rem);max-width:19ch;margin-bottom:1.2rem}
+h3{font-size:1.16rem;font-weight:600;letter-spacing:-.015em;margin-bottom:.5rem}
+
+/* entrances — the "butter" is here: longer, softer, staged */
+.rise{opacity:0;transform:translate3d(0,32px,0);transition:opacity 1s var(--ease-out-expo),transform 1s var(--ease-out-expo)}
+.in.rise,.in .rise{opacity:1;transform:none}
+.in .rise:nth-child(2){transition-delay:.09s}
+.in .rise:nth-child(3){transition-delay:.18s}
+.in .rise:nth-child(4){transition-delay:.27s}
+.in .rise:nth-child(5){transition-delay:.36s}
+.in.done .rise:nth-child(2),.in.done .rise:nth-child(3),
+.in.done .rise:nth-child(4),.in.done .rise:nth-child(5){transition-delay:0s!important}
+
+/* shot frames — subtle rim light and shine on hover */
+.shotframe{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--panel);
+  box-shadow:0 26px 70px -30px rgba(0,0,0,.95),0 0 0 1px rgba(255,255,255,.02) inset;
+  transition:border-color .5s var(--ease-out-expo),transform .6s var(--ease-out-expo),box-shadow .6s var(--ease-out-expo);
+  position:relative;isolation:isolate}
+.shotframe:hover{border-color:var(--line-strong);transform:translateY(-4px);box-shadow:0 34px 90px -30px rgba(0,0,0,.95),0 0 40px -20px rgba(240,232,64,.25),0 0 0 1px rgba(240,232,64,.1) inset}
+.shotframe::after{content:"";position:absolute;inset:0;border-radius:14px;pointer-events:none;
+  background:radial-gradient(circle 200px at var(--fx,50%) var(--fy,50%),rgba(240,232,64,.06),transparent 70%);
+  opacity:0;transition:opacity .5s var(--ease)}
+.shotframe:hover::after{opacity:1}
+.shotframe img{width:100%}
+
+/* image parallax and frame reveal */
+.shotframe img,.card img{transform:translate3d(0,var(--py,0px),0) scale(1.06);will-change:transform;transition:transform .8s var(--ease-out-expo)}
+.shotframe.rise{clip-path:inset(0 0 16% 0);
+  transition:opacity 1s var(--ease-out-expo),transform 1s var(--ease-out-expo),clip-path 1.3s var(--ease-out-expo)}
+.in .shotframe.rise{clip-path:inset(0 0 0 0)}
+
+/* section headlines arrive word by word */
+h2.big .hw{display:inline-block;white-space:pre;opacity:0;transform:translate3d(0,32px,0);
+  transition:opacity .85s var(--ease-out-expo) var(--hd,0s),transform .85s var(--ease-out-expo) var(--hd,0s)}
+.in h2.big .hw{opacity:1;transform:none}
+.obs.done h2.big .hw{transition-delay:0s}
+
+/* the accent rules draw themselves across */
+.rule{transform:scaleX(0);transform-origin:left center;transition:transform 1.5s var(--ease-out-expo)}
+.in-rule .rule,.rule.drawn{transform:scaleX(1)}
+
+/* spec chips settle in sequence, with hover glow */
+.spec span{opacity:0;transform:translate3d(0,14px,0);
+  transition:opacity .6s var(--ease-out-expo) var(--cd,0s),transform .6s var(--ease-out-expo) var(--cd,0s),border-color .35s var(--ease),background .35s var(--ease),color .35s var(--ease)}
+.in .spec span{opacity:1;transform:none}
+.obs.done .spec span{transition-delay:0s}
+.spec span:hover{border-color:var(--accent);background:rgba(240,232,64,.06);color:var(--text-primary)}
+
+/* lede paragraphs arrive line by line */
+.lede .lw{display:inline-block;white-space:pre;opacity:0;transform:translate3d(0,16px,0);
+  transition:opacity .7s var(--ease-out-expo) var(--ld,0s),transform .7s var(--ease-out-expo) var(--ld,0s)}
+.in .lede .lw{opacity:1;transform:none}
+.obs.done .lede .lw{transition-delay:0s}
+
+/* kickers with a leading rule */
+.kicker{position:relative;padding-left:0}
+.kicker::before{content:"";position:absolute;left:-46px;top:50%;width:34px;height:1px;
+  background:var(--accent);transform:scaleX(0);transform-origin:right center;
+  transition:transform 1s var(--ease-out-expo) .1s;
+  box-shadow:0 0 8px rgba(240,232,64,.5)}
+.in .kicker::before{transform:scaleX(1)}
+@media (max-width:1100px){.kicker::before{display:none}}
+
+/* payment rails marquee */
+.rails{margin-top:2.4rem;overflow:hidden;position:relative;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);
+          mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.rails-track{display:flex;width:max-content;gap:0;animation:rail 26s linear infinite;animation-delay:-4s}
+.rails-track span{font-family:var(--mono);font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--text-secondary);padding:0 1.9rem;white-space:nowrap;display:inline-flex;align-items:center;gap:1.9rem;
+  transition:color .4s var(--ease)}
+.rails:hover .rails-track{animation-play-state:paused}
+.rails-track span:hover{color:var(--accent)}
+.rails-track span::after{content:"";width:5px;height:5px;border-radius:50%;background:var(--accent);opacity:.55;
+  box-shadow:0 0 6px rgba(240,232,64,.6)}
+@keyframes rail{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+
+/* inventory cards */
+.card{transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) translateY(var(--ty,0px));
+  transition:transform .6s var(--ease-out-expo),border-color .5s var(--ease)}
+.card.tilting{transition:transform .12s linear,border-color .5s var(--ease)}
+
+/* nav ring of page progress */
+.navring{width:30px;height:30px;flex:0 0 auto;transform:rotate(-90deg);margin-left:.2rem}
+.navring circle{fill:none;stroke-width:2.5}
+.navring .bg{stroke:var(--line)}
+.navring .fg{stroke:var(--accent);stroke-linecap:round;stroke-dasharray:82;
+  stroke-dashoffset:calc(82 * (1 - var(--sp,0)));
+  filter:drop-shadow(0 0 3px rgba(240,232,64,.4))}
+@media (max-width:560px){.navring{display:none}}
+
+/* FAQ answers slide open */
+.faq .ans{display:grid;grid-template-rows:0fr;opacity:0;
+  transition:grid-template-rows .55s var(--ease-out-expo),opacity .45s var(--ease-out-expo),padding .55s var(--ease-out-expo);
+  padding-top:0;padding-bottom:0}
+.faq .ans > div{overflow:hidden;min-height:0}
+.faq details[open] .ans{grid-template-rows:1fr;opacity:1;padding-bottom:1.4rem}
+.shotcap{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text-secondary);padding:.65rem .9rem;border-top:1px solid var(--line);transition:color .4s var(--ease)}
+.shotframe:hover .shotcap{color:var(--text-primary)}
+
+/* S1 The Line */
+.line-sec{position:relative;overflow:hidden}
+.line-rail{position:relative;display:grid;grid-template-columns:1fr 64px 1fr;
+  row-gap:clamp(1.6rem,3.4vw,2.6rem);max-width:940px;margin:3.6rem auto 0;align-items:start}
+.line-rail .rail{position:absolute;left:50%;top:7px;bottom:7px;width:2px;margin-left:-1px;background:var(--line)}
+.line-rail .rail i{position:absolute;left:0;top:0;width:100%;height:0;display:block;
+  background:linear-gradient(180deg,rgba(240,232,64,.45),var(--accent));box-shadow:0 0 14px rgba(240,232,64,.6);
+  transition:height .12s linear}
+.lstep{display:contents}
+.lstep .node{grid-column:2;justify-self:center;width:15px;height:15px;border-radius:50%;
+  background:var(--canvas);border:2px solid var(--border-ui);margin-top:2px;position:relative;z-index:1;
+  transition:background .55s var(--ease-out-expo),border-color .55s var(--ease-out-expo),box-shadow .55s var(--ease-out-expo),transform .55s var(--spring)}
+.lstep.lit .node{background:var(--accent);border-color:var(--accent);box-shadow:0 0 0 7px rgba(240,232,64,.13),0 0 20px rgba(240,232,64,.5);transform:scale(1.15)}
+.lstep .lt{transition:opacity .6s var(--ease-out-expo),color .6s var(--ease-out-expo),transform .6s var(--ease-out-expo);opacity:.38;max-width:34ch;transform:translate3d(0,4px,0)}
+.lstep.lit .lt{opacity:1;transform:none}
+.lstep .n{font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;color:var(--accent);display:block;margin-bottom:.2rem}
+.lstep .lt p{font-size:.93rem;color:var(--text-secondary);transition:color .6s var(--ease-out-expo)}
+.lstep.lit .lt p{color:var(--text-primary)}
+.lstep.odd .lt{grid-column:1;text-align:right;justify-self:end}
+.lstep.even .lt{grid-column:3;justify-self:start}
+.lstep:nth-of-type(1) > *{grid-row:1}
+.lstep:nth-of-type(2) > *{grid-row:2}
+.lstep:nth-of-type(3) > *{grid-row:3}
+.lstep:nth-of-type(4) > *{grid-row:4}
+.lstep:nth-of-type(5) > *{grid-row:5}
+.lstep:nth-of-type(6) > *{grid-row:6}
+@media (max-width:820px){
+  .line-rail{grid-template-columns:32px 1fr;column-gap:1rem}
+  .line-rail .rail{left:16px;margin-left:-1px}
+  .lstep .node{grid-column:1}
+  .lstep.odd .lt,.lstep.even .lt{grid-column:2;text-align:left;justify-self:start;max-width:none}
+}
+
+/* Fire pad */
+.fire{display:flex;flex-direction:column;align-items:center;gap:1rem;margin-top:3.5rem}
+.pad{position:relative;width:132px;height:132px;border-radius:50%;border:1px solid var(--border-ui);
+  background:var(--panel);cursor:pointer;display:grid;place-items:center;
+  font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text-secondary);
+  transition:border-color .45s var(--ease-out-expo),color .45s var(--ease-out-expo),transform .3s var(--spring),box-shadow .5s var(--ease-out-expo);
+  -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;touch-action:none;padding:0}
+.pad:hover{border-color:var(--accent);color:var(--text-primary);box-shadow:0 0 40px -10px rgba(240,232,64,.4)}
+.pad:active{transform:scale(.96)}
+.pad svg{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg);pointer-events:none}
+.pad .pt{stroke:var(--line);stroke-width:2;fill:none}
+.pad .pf{stroke:var(--accent);stroke-width:2;fill:none;stroke-linecap:round;
+  stroke-dasharray:396;stroke-dashoffset:calc(396 * (1 - var(--hold,0)));
+  filter:drop-shadow(0 0 4px rgba(240,232,64,.6))}
+.pad.done{border-color:var(--accent);color:var(--accent)}
+.fire-note{font-size:.9rem;color:var(--text-secondary);opacity:0;transition:opacity .7s var(--ease-out-expo);text-align:center}
+.fire-note.on{opacity:1;color:var(--text-primary)}
+
+/* S2 two columns, offset */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,4vw,4rem);margin-top:3.5rem;align-items:start}
+.two > div:last-child{margin-top:clamp(0rem,7vw,5rem)}
+.two .stack{display:flex;flex-direction:column;gap:1.1rem}
+.shotframe img{height:230px;object-fit:cover;object-position:top center;background:var(--panel)}
+.rail .stack{display:flex;flex-direction:column;gap:1.1rem}
+.rail > .shotframe img{height:330px}
+.band-shots .shotframe img{height:260px}
+@media (max-width:860px){
+  .shotframe img{height:200px}
+  .rail > .shotframe img{height:240px}
+}
+@media (max-width:860px){.two{grid-template-columns:1fr}.two > div:last-child{margin-top:0}}
+
+/* S3 rail + wide shot */
+.rail{display:grid;grid-template-columns:minmax(220px,300px) 1fr;gap:clamp(1.5rem,4vw,3.5rem);align-items:center}
+@media (max-width:900px){.rail{grid-template-columns:1fr}}
+
+/* S4 centred column then band */
+.centered{max-width:640px;margin-inline:auto;text-align:center}
+.centered h2{margin-inline:auto}
+.centered .lede{margin-inline:auto}
+.band-shots{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:3.5rem}
+@media (max-width:760px){.band-shots{grid-template-columns:1fr}}
+
+/* S5 cards */
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem;margin-top:3.5rem}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;
+  transition:border-color .5s var(--ease-out-expo),transform .5s var(--ease-out-expo),box-shadow .5s var(--ease-out-expo);
+  position:relative;isolation:isolate}
+.card::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:1;
+  background:radial-gradient(circle 300px at var(--fx,50%) var(--fy,50%),rgba(240,232,64,.06),transparent 65%);
+  opacity:0;transition:opacity .5s var(--ease)}
+.card:hover{border-color:var(--line-strong);box-shadow:0 26px 60px -30px rgba(0,0,0,.9),0 0 40px -20px rgba(240,232,64,.15)}
+.card:hover::before{opacity:1}
+.card img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top left}
+.card .body{padding:1.1rem 1.15rem 1.3rem;position:relative;z-index:2}
+.card p{font-size:.9rem;color:var(--text-secondary)}
+@media (max-width:1000px){.cards{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.cards{grid-template-columns:1fr}}
+
+/* S6 floor */
+.floor{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;margin-top:3rem}
+@media (max-width:760px){.floor{grid-template-columns:1fr}}
+
+/* S7 architecture */
+.arch{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
+@media (max-width:900px){.arch{grid-template-columns:1fr}}
+.arch svg{width:100%;height:auto}
+.arch .box{fill:var(--panel);stroke:var(--line-strong);stroke-width:1.5;transition:stroke .5s var(--ease)}
+.arch .box-t{fill:rgba(240,232,64,.07);stroke:var(--accent);stroke-width:1.5}
+.arch svg:hover .box{stroke:var(--border-ui)}
+.arch .lbl{fill:var(--text-primary);font-family:var(--mono);font-size:10px;letter-spacing:.06em}
+.arch .lbl-s{fill:var(--text-secondary);font-family:var(--mono);font-size:8.5px;letter-spacing:.06em}
+.arch .conn{stroke:var(--line-strong);stroke-width:1.5;fill:none;
+  stroke-dasharray:var(--l,120);stroke-dashoffset:var(--l,120);
+  transition:stroke-dashoffset 1.5s var(--ease-out-expo)}
+.in .conn{stroke-dashoffset:0}
+.in .conn:nth-of-type(2){transition-delay:.15s}
+.in .conn:nth-of-type(3){transition-delay:.3s}
+.in .conn:nth-of-type(4){transition-delay:.45s}
+.spec{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2rem}
+.spec span{font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;color:var(--text-secondary);
+  border:1px solid var(--line);border-radius:999px;padding:.38rem .8rem;background:transparent}
+
+/* S8 download */
+.dl{display:grid;grid-template-columns:1fr auto;gap:2.5rem;align-items:center;
+  background:linear-gradient(140deg,var(--panel) 0%,var(--panel-2) 100%);
+  border:1px solid var(--line);border-radius:18px;padding:clamp(1.8rem,4vw,3.2rem);position:relative;overflow:hidden;
+  transition:border-color .5s var(--ease-out-expo),transform .6s var(--ease-out-expo)}
+.dl:hover{border-color:var(--line-strong);transform:translateY(-3px)}
+.dl::after{content:"";position:absolute;right:-90px;top:-90px;width:280px;height:280px;border-radius:50%;
+  background:radial-gradient(circle,rgba(240,232,64,.15),transparent 68%);pointer-events:none;
+  animation:pulse 7s var(--ease-soft) infinite;animation-delay:-2.4s}
+@keyframes pulse{0%,100%{opacity:.5;transform:scale(1)}50%{opacity:1;transform:scale(1.15)}}
+.dl .meta{font-family:var(--mono);font-size:.7rem;color:var(--text-secondary);margin-top:.8rem;letter-spacing:.06em}
+@media (max-width:760px){.dl{grid-template-columns:1fr}}
+
+/* FAQ */
+.faq{max-width:780px;margin-inline:auto;margin-top:3rem;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line);transition:background .4s var(--ease)}
+.faq details[open]{background:rgba(240,232,64,.015)}
+.faq summary{cursor:pointer;padding:1.25rem 2.4rem 1.25rem 0;font-family:var(--display);font-weight:600;
+  font-size:1.03rem;list-style:none;position:relative;transition:color .35s var(--ease-out-expo),padding .35s var(--ease-out-expo)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:hover{color:var(--accent);padding-left:.5rem}
+.faq details[open] summary{color:var(--accent)}
+.faq summary::after{content:"";position:absolute;right:.4rem;top:50%;width:11px;height:11px;
+  border-right:1.6px solid var(--border-ui);border-bottom:1.6px solid var(--border-ui);
+  transform:translateY(-70%) rotate(45deg);transition:transform .5s var(--ease-out-expo),border-color .35s var(--ease)}
+.faq details[open] summary::after{transform:translateY(-30%) rotate(225deg);border-color:var(--accent)}
+.faq .ans{padding:0 2.4rem 1.4rem 0;color:var(--text-secondary);font-size:.97rem}
+
+/* CTA */
+.close{text-align:center}
+.close h2{margin-inline:auto;margin-bottom:1.1rem}
+.close .lede{margin-inline:auto}
+.close .cta{display:flex;gap:.8rem;justify-content:center;margin-top:2.2rem;flex-wrap:wrap}
+.close .tel{font-family:var(--mono);font-size:.8rem;color:var(--text-secondary);margin-top:1.8rem;letter-spacing:.06em}
+.close .tel a{color:var(--accent);text-decoration:none;transition:color .3s var(--ease)}
+.close .tel a:hover{color:var(--accent-hover)}
+
+/* Footer */
+footer{border-top:1px solid var(--line);padding:3.5rem 0 3rem;position:relative;z-index:1;background:var(--canvas)}
+.foot{display:flex;flex-wrap:wrap;gap:1.6rem 2.5rem;align-items:flex-start;justify-content:space-between}
+.foot nav{display:flex;flex-wrap:wrap;gap:1.2rem}
+.foot a{font-size:.88rem;color:var(--text-secondary);text-decoration:none;transition:color .35s var(--ease),transform .35s var(--ease)}
+.foot a:hover{color:var(--text-primary);transform:translateY(-1px)}
+.disclose{margin-top:2.5rem;padding-top:1.6rem;border-top:1px solid var(--line);font-size:.8rem;color:var(--text-secondary);max-width:68ch}
+
+/* living whisper — with a subtle breathing halo */
+.glowdot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent);position:relative;vertical-align:middle;margin-right:.5rem;
+  box-shadow:0 0 8px rgba(240,232,64,.7)}
+.glowdot::after{content:"";position:absolute;inset:-5px;border-radius:50%;background:var(--accent);opacity:.3;
+  animation:halo 4.4s var(--ease-soft) infinite;animation-delay:-1.2s}
+@keyframes halo{0%,100%{opacity:.12;transform:scale(.7)}50%{opacity:.42;transform:scale(1.35)}}
+
+/* ============ STATIC-HERO GATES ============ */
+@media (max-width: 720px){
+  .hero{display:none}.static-hero{display:flex}.spine{display:none}
+}
+@media (orientation: portrait) and (max-width: 1024px){
+  .hero{display:none}.static-hero{display:flex}.spine{display:none}
+}
+@media (orientation: portrait) and (pointer: coarse){
+  .hero{display:none}.static-hero{display:flex}.spine{display:none}
+}
+@media (orientation: landscape) and (pointer: coarse) and (max-height: 560px){
+  .hero{display:none}.static-hero{display:flex}.spine{display:none}
+}
+@media (prefers-reduced-motion: reduce){
+  .hero{display:none}.static-hero{display:flex}
+}
+
+@media (max-height:560px){.ring,.cue{display:none}}
+
+/* ============ REDUCED MOTION ============ */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;transition-delay:0s!important}
+  .rise{opacity:1;transform:none}
+  .rail i{height:100%}
+  .lstep .node{background:var(--accent);border-color:var(--accent)}
+  .lstep .lt{opacity:1;transform:none}
+  .lstep .lt p{color:var(--text-primary)}
+  .pad .pf{stroke-dashoffset:0}
+  .pad{border-color:var(--accent);color:var(--accent)}
+  .fire-note{opacity:1}
+  .arch .conn{stroke-dashoffset:0}
+  h2.big .hw{opacity:1;transform:none}
+  .shotframe.rise{clip-path:inset(0 0 0 0)}
+  .spec span{opacity:1;transform:none}
+  .rule{transform:scaleX(1)}
+  .shotframe img,.card img{transform:scale(1.06)}
+  .lede .lw{opacity:1;transform:none}
+  .kicker::before{transform:scaleX(1)}
+  .rails-track{animation:none;transform:none}
+  .card{transform:none}
+  .btn-primary,.btn-ghost{transform:none}
+  .faq details[open] .ans{grid-template-rows:1fr;opacity:1}
+  .pad.ready .pf,.pad.done .pf{animation:none}
+  .spine i{height:100%}
+  .spotlight{display:none}
+}
+
+body.pinned .rise{opacity:1;transform:none}
+body.pinned .rail i{height:100%}
+body.pinned .lstep .node{background:var(--accent);border-color:var(--accent);box-shadow:0 0 0 7px rgba(240,232,64,.13)}
+body.pinned .lstep .lt{opacity:1;transform:none}
+body.pinned .lstep .lt p{color:var(--text-primary)}
+body.pinned .pad .pf{stroke-dashoffset:0}
+body.pinned .pad{border-color:var(--accent);color:var(--accent)}
+body.pinned .fire-note{opacity:1}
+body.pinned .arch .conn{stroke-dashoffset:0}
+body.pinned h2.big .hw{opacity:1;transform:none}
+body.pinned .shotframe.rise{clip-path:inset(0 0 0 0)}
+body.pinned .spec span{opacity:1;transform:none}
+body.pinned .rule{transform:scaleX(1)}
+body.pinned .shotframe img,body.pinned .card img{transform:scale(1.06)}
+body.pinned .lede .lw{opacity:1;transform:none}
+body.pinned .kicker::before{transform:scaleX(1)}
+body.pinned .rails-track{animation:none;transform:none}
+body.pinned .card{transform:none}
+body.pinned .btn-primary,body.pinned .btn-ghost{transform:none}
+body.pinned .faq details[open] .ans{grid-template-rows:1fr;opacity:1}
+body.pinned .pad.ready .pf,body.pinned .pad.done .pf{animation:none}
+body.pinned .spotlight{display:none}
+
+/* pause everything on hidden tabs */
+body.paused *,body.paused *::before,body.paused *::after{animation-play-state:paused!important}
+</style>
 </head>
 
 <body>
-  <div id="root">
-    <!-- Server-Side Crawler Semantic SEO Fallback (instantly hydrated/replaced by React on load) -->
-    <header style="background: #0A0A08; color: #E8E4DC; padding: 20px; text-align: center;">
-      <h1>STS Kiosk — Nepal's Best Restaurant Management Software & Self-Ordering System</h1>
-      <p>The leading RMS and customer self-ordering kiosk app for restaurants, cafes, and hospitality businesses across Nepal.</p>
-    </header>
+<a class="skip" href="#main">Skip to content</a>
+<div class="env" aria-hidden="true"><i></i></div>
+<div class="spotlight" id="spotlight" aria-hidden="true"></div>
+<div class="spine" aria-hidden="true"><i id="spineFill"></i><b id="spineDot"></b></div>
 
-    <main style="background: #0A0A08; color: #E8E4DC; padding: 20px; max-width: 900px; margin: 0 auto;">
-      <section>
-        <h2>Why STS Kiosk is the Best Restaurant Software in Nepal</h2>
-        <p>STS Kiosk by Sitoula Tech Solutions delivers an end-to-end restaurant management system (RMS) tailored for Nepal. From high-speed customer self-ordering kiosks and waiter POS apps to instant KOT kitchen displays, dynamic NPR VAT billing, recipe costing, and standalone Windows desktop application support.</p>
-        <ul>
-          <li><strong>Customer Self-Ordering Touch Kiosks:</strong> Guests browse visual menus, customize items with add-ons and modifiers, and send orders directly to the kitchen.</li>
-          <li><strong>Real-Time KOT & Kitchen Sync:</strong> Instant kitchen order tickets with zero communication delays.</li>
-          <li><strong>Complete Restaurant POS & Billing:</strong> Support for dine-in, takeaway, cash, and digital QR payments in NPR.</li>
-          <li><strong>Recipe & Inventory Management:</strong> Automatic stock deduction per item in grams or pieces with low-stock alerts.</li>
-          <li><strong>Windows Desktop & Cross-Platform:</strong> Dedicated Windows .exe application for counter terminals and interactive web app.</li>
-        </ul>
-      </section>
+<div class="page">
 
-      <section>
-        <h2>Frequently Asked Questions (FAQ) - Restaurant Software Nepal</h2>
-        <article>
-          <h3>What is STS Kiosk and why is it considered the best RMS in Nepal?</h3>
-          <p>STS Kiosk integrates customer self-ordering kiosks, staff tablet ordering, NPR VAT billing, live KOT kitchen displays, and recipe inventory control into one unified platform.</p>
-        </article>
-        <article>
-          <h3>How does customer self-ordering benefit restaurants?</h3>
-          <p>It eliminates lines at the billing counter, raises average check size through automated upselling, and guarantees 100% order accuracy directly to the kitchen.</p>
-        </article>
-        <article>
-          <h3>Is there a Windows Desktop application?</h3>
-          <p>Yes, STS Kiosk is available as a standalone Windows desktop executable (.exe) for counter POS terminals and touchscreen kiosk machines.</p>
-        </article>
-      </section>
-    </main>
-
-    <footer style="background: #0A0A08; color: #888; padding: 20px; text-align: center;">
-      <p>© 2026 STS Kiosk • Sitoula Tech Solutions • Kathmandu, Nepal</p>
-    </footer>
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="STS, home">
+      <img class="brandmark" src="assets/sts-lockup.png" alt="STS" width="400" height="362">
+    </a>
+    <nav class="navlinks" aria-label="Main">
+      <a href="#ordering">Floor</a>
+      <a href="#kitchen">Kitchen</a>
+      <a href="#billing">Billing</a>
+      <a href="#stock">Stock</a>
+      <a href="#kiosk">Kiosk</a>
+      <a href="#faq">Questions</a>
+      <a class="btn btn-ghost" href="assets/STS-Kiosk-Setup.exe" download>Windows app</a>
+      <a class="btn btn-primary" href="#demo">Book a demo</a>
+      <svg class="navring" viewBox="0 0 30 30" aria-hidden="true">
+        <circle class="bg" cx="15" cy="15" r="13"/><circle class="fg" cx="15" cy="15" r="13"/>
+      </svg>
+    </nav>
   </div>
-  <script type="module" src="/src/main.tsx"></script>
-</body>
+</header>
 
+<main id="main" tabindex="-1">
+<span id="top"></span>
+
+<!-- ================= SCRUB HERO ================= -->
+<section class="hero" id="hero" aria-label="STS Kiosk introduction">
+  <div class="stage" id="stage">
+    <div class="poster" id="poster" aria-hidden="true"></div>
+    <video id="video" preload="none" muted playsinline aria-hidden="true" tabindex="-1"></video>
+    <div class="scrim" aria-hidden="true"></div>
+    <div class="vignette" aria-hidden="true"></div>
+
+    <svg class="ring" id="ring" viewBox="0 0 48 48" aria-hidden="true">
+      <circle cx="24" cy="24" r="20" fill="none" stroke="currentColor" stroke-width="2.5" opacity=".18"/>
+      <circle cx="24" cy="24" r="20" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-dasharray="126" style="stroke-dashoffset:var(--ld,126)"/>
+    </svg>
+
+    <div class="bands" id="bands">
+      <div class="band band-left deep-l" data-a="0" data-b="0.22">
+        <div class="inner"><div class="col">
+          <h2 class="split e-drift" data-seed="11">One system runs the whole restaurant.</h2>
+          <p class="sub">Orders, kitchen, billing, stock, vendors, tables and rooms.</p>
+        </div></div>
+      </div>
+
+      <div class="band band-right deep-r" data-a="0.25" data-b="0.47" data-spread="0.5">
+        <div class="inner"><div class="col">
+          <h2 class="split e-grid" data-seed="27">Every plate sold moves your stock.</h2>
+          <p class="sub">Recipes take the ingredients down. Nobody counts the same thing twice.</p>
+        </div></div>
+      </div>
+
+      <div class="band band-left" data-a="0.5" data-b="0.72" data-ramp="0.03">
+        <div class="inner"><div class="col">
+          <h2 class="split e-punch" data-seed="41" data-em="3">Bills reach the IRD on their own.</h2>
+          <p class="sub">Tax worked out. CBMS payload sent. PDF generated.</p>
+        </div></div>
+      </div>
+
+      <div class="band band-mid" data-a="0.76" data-b="1" data-staged="1">
+        <div class="inner"><div class="col">
+          <h1 class="split e-rise" data-seed="7">One system. Your whole restaurant.</h1>
+          <p class="sub">Restaurant management built in Nepal: orders, kitchen, IRD billing, stock and vendors. Add the self-service kiosk when you want it.</p>
+          <div class="cta">
+            <a class="btn btn-primary" href="#demo">Book a demo on WhatsApp</a>
+            <a class="btn btn-ghost" href="assets/STS-Kiosk-Setup.exe" download>Download for Windows</a>
+          </div>
+        </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STATIC HERO ================= -->
+<section class="static-hero" aria-label="STS Kiosk introduction">
+  <div class="shot" id="staticShot" aria-hidden="true"></div>
+  <div class="shade" aria-hidden="true"></div>
+  <div class="wrap">
+    <p class="kicker">Sitoula Tech Solutions · Kathmandu</p>
+    <h1>One system. Your whole restaurant.</h1>
+    <p class="sub">Restaurant management built in Nepal: orders, kitchen, IRD billing, stock and vendors. Add the self-service kiosk when you want it.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#demo">Book a demo on WhatsApp</a>
+      <a class="btn btn-ghost" href="assets/STS-Kiosk-Setup.exe" download>Download for Windows</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= S1 THE LINE ================= -->
+<section class="sec line-sec obs" id="path">
+  <div class="wrap">
+    <div class="centered">
+      <p class="kicker rise">The path of one order</p>
+      <h2 class="big rise">Six steps, one system.</h2>
+      <p class="lede rise">An order enters at the table, the counter or the kiosk, and the same system carries it to the kitchen, onto the bill and out to the tax office. Here is every step it takes.</p>
+    </div>
+
+    <div class="line-rail" id="lineRail">
+      <div class="lstep odd" data-i="0">
+        <div class="lt"><span class="n">01 · TAP</span><p>A guest chooses a dish on the kiosk, or a waiter taps it on the floor.</p></div>
+        <span class="node" aria-hidden="true"></span>
+      </div>
+      <div class="lstep even" data-i="1">
+        <span class="node" aria-hidden="true"></span>
+        <div class="lt"><span class="n">02 · ORDER</span><p>The order is validated and recorded against the table, room or takeaway.</p></div>
+      </div>
+      <div class="lstep odd" data-i="2">
+        <div class="lt"><span class="n">03 · TICKET</span><p>A kitchen order ticket is created the moment the order is placed.</p></div>
+        <span class="node" aria-hidden="true"></span>
+      </div>
+      <div class="lstep even" data-i="3">
+        <span class="node" aria-hidden="true"></span>
+        <div class="lt"><span class="n">04 · KITCHEN</span><p>The printer agent on your kitchen machine sends it to your KOT printer.</p></div>
+      </div>
+      <div class="lstep odd" data-i="4">
+        <div class="lt"><span class="n">05 · BILL</span><p>The invoice is built with the tax already worked out, and a PDF comes with it.</p></div>
+        <span class="node" aria-hidden="true"></span>
+      </div>
+      <div class="lstep even" data-i="5">
+        <span class="node" aria-hidden="true"></span>
+        <div class="lt"><span class="n">06 · TAX OFFICE</span><p>The billing module prepares the CBMS payload and sends it to the IRD.</p></div>
+      </div>
+
+      <div class="rail" aria-hidden="true"><i id="railFill"></i></div>
+    </div>
+
+    <div class="fire">
+      <button class="pad" id="pad" aria-describedby="fireNote">
+        <svg viewBox="0 0 132 132" aria-hidden="true">
+          <circle class="pt" cx="66" cy="66" r="63"/>
+          <circle class="pf" cx="66" cy="66" r="63"/>
+        </svg>
+        <span id="padLabel">Hold to fire</span>
+      </button>
+      <p class="fire-note" id="fireNote">That took you two seconds. It takes your kitchen none.</p>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="rule"></div></div>
+
+<!-- ================= S2 ORDERS AND THE FLOOR ================= -->
+<section class="sec sec-alt obs" id="ordering">
+  <div class="wrap">
+    <p class="kicker rise">Orders and the floor</p>
+    <h2 class="big rise">Take the order, wherever it starts.</h2>
+    <p class="lede rise">A waiter picks the table and sends the order. Same menu, same kitchen ticket, same bill, whether it came from the floor, a room, or a takeaway counter.</p>
+
+    <div class="two">
+      <div class="stack">
+        <div class="shotframe rise"><img src="assets/table_selection.webp" alt="Selecting a table before taking an order" loading="lazy"><div class="shotcap">Floor · pick a table</div></div>
+        <div class="shotframe rise"><img src="assets/tables.webp" alt="Table management screen" loading="lazy"><div class="shotcap">Floor · tables</div></div>
+      </div>
+      <div class="stack">
+        <div class="shotframe rise"><img src="assets/rooms.webp" alt="Room management and room billing screen" loading="lazy"><div class="shotcap">Floor · rooms and room billing</div></div>
+        <div class="shotframe rise"><img src="assets/kiosk_order_success.webp" alt="Order confirmation after an order is placed" loading="lazy"><div class="shotcap">Order · confirmed</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= S3 KITCHEN ================= -->
+<section class="sec obs" id="kitchen">
+  <div class="wrap">
+    <div class="rail">
+      <div>
+        <p class="kicker rise">Kitchen</p>
+        <h2 class="big rise">The ticket prints itself.</h2>
+        <p class="lede rise">Every order becomes a kitchen ticket the moment it is placed. The printer agent on your kitchen machine takes it straight to your KOT printer. Status changes go back to the floor live, so nobody walks over to ask if table nine is ready.</p>
+        <p class="lede rise" style="margin-top:1.2rem"><span class="glowdot" aria-hidden="true"></span>Live order status, pushed as it changes.</p>
+      </div>
+      <div class="shotframe rise"><img src="assets/orders.webp" alt="Order management screen showing live orders with preparing and ready status" loading="lazy"><div class="shotcap">Admin · live orders</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="rule"></div></div>
+
+<!-- ================= S4 BILLING ================= -->
+<section class="sec sec-alt obs" id="billing">
+  <div class="wrap">
+    <div class="centered">
+      <p class="kicker rise">Billing</p>
+      <h2 class="big rise">CBMS is not an add-on here. It is in the billing module.</h2>
+      <p class="lede rise">Nepal wants restaurant invoices reported to the Inland Revenue Department through CBMS. STS builds the invoice, works out the tax, prepares the CBMS payload and sends it. The PDF is generated by the system. You are not keeping a second set of books.</p>
+    </div>
+    <div class="band-shots">
+      <div class="shotframe rise"><img src="assets/invoice_checkout.webp" alt="Invoice checkout screen with tax calculated" loading="lazy"><div class="shotcap">Billing · invoice checkout</div></div>
+      <div class="shotframe rise"><img src="assets/invoice_history.webp" alt="Invoice history list showing past invoices" loading="lazy"><div class="shotcap">Billing · invoice history</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= S5 STOCK ================= -->
+<section class="sec obs" id="stock">
+  <div class="wrap">
+    <p class="kicker rise">Inventory</p>
+    <h2 class="big rise">Sell a plate, lose the ingredients.</h2>
+    <p class="lede rise">Stock moves when the kitchen moves, not when somebody remembers to write it down.</p>
+
+    <div class="cards">
+      <article class="card rise">
+        <img src="assets/menu_recipe.webp" alt="Recipe screen tying a menu item to its ingredients" loading="lazy">
+        <div class="body"><h3>Recipes</h3><p>Tie an item to what it is made of. Selling it takes the stock down.</p></div>
+      </article>
+      <article class="card rise">
+        <img src="assets/stock_items.webp" alt="Stock items list with units and quantities" loading="lazy">
+        <div class="body"><h3>Stock</h3><p>Units, quantities, movements. All of it recorded, none of it counted twice.</p></div>
+      </article>
+      <article class="card rise">
+        <img src="assets/purchase.webp" alt="Purchase entry screen" loading="lazy">
+        <div class="body"><h3>Purchases</h3><p>Log what came in and what it cost.</p></div>
+      </article>
+      <article class="card rise">
+        <img src="assets/vendors.webp" alt="Vendor list with balances" loading="lazy">
+        <div class="body"><h3>Vendors</h3><p>Who you buy from, what you owe them, what you have paid.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="rule"></div></div>
+
+<!-- ================= S6 THE KIOSK ADD-ON ================= -->
+<section class="sec sec-alt obs" id="kiosk">
+  <div class="wrap">
+    <div class="rail">
+      <div>
+        <p class="kicker rise">Add-on module</p>
+        <h2 class="big rise">Want guests to order themselves? Switch the kiosk on.</h2>
+        <p class="lede rise">The self-service kiosk is a module on the same system, not a separate product. Guests pick dine-in or takeaway, choose variations and add-ons, and pay with Fonepay, eSewa, Khalti or cash. The order lands in the same queue your waiters use and prints on the same kitchen printer.</p>
+        <div class="rails" aria-hidden="true">
+          <div class="rails-track">
+            <span>Fonepay</span><span>eSewa</span><span>Khalti</span><span>Cash</span>
+            <span>Fonepay</span><span>eSewa</span><span>Khalti</span><span>Cash</span>
+            <span>Fonepay</span><span>eSewa</span><span>Khalti</span><span>Cash</span>
+            <span>Fonepay</span><span>eSewa</span><span>Khalti</span><span>Cash</span>
+          </div>
+        </div>
+        <p class="vh">Accepted at the kiosk: Fonepay, eSewa, Khalti and cash.</p>
+      </div>
+      <div class="stack">
+        <div class="shotframe rise"><img src="assets/kiosk_screen_landing.webp" alt="The kiosk welcome screen, offering dine-in or takeaway" loading="lazy"><div class="shotcap">Kiosk · welcome</div></div>
+        <div class="shotframe rise"><img src="assets/kiosk_ordering.webp" alt="A guest browsing the menu on the kiosk" loading="lazy"><div class="shotcap">Kiosk · choosing dishes</div></div>
+        <div class="shotframe rise"><img src="assets/kiosk_checkout.webp" alt="The kiosk checkout screen with payment options" loading="lazy"><div class="shotcap">Kiosk · payment</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= S7 ARCHITECTURE ================= -->
+<section class="sec obs" id="under">
+  <div class="wrap">
+    <div class="arch">
+      <div>
+        <p class="kicker rise">Under it</p>
+        <h2 class="big rise">Boring where it should be boring.</h2>
+        <p class="lede rise">Every restaurant on the system gets its own separate database. Two restaurants never see each other's data, and that separation is enforced by the database itself rather than trusted to the app. Sessions are signed and expire. Staff only reach the screens their role allows. Updates land on every screen the moment they happen.</p>
+        <div class="spec rise">
+          <span>Separate data per restaurant</span><span>Isolation enforced at the database</span>
+          <span>Role-based access</span><span>Signed, expiring sessions</span>
+          <span>Live updates to every screen</span><span>Versioned, reversible upgrades</span>
+        </div>
+      </div>
+
+      <svg viewBox="0 0 400 300" aria-label="Diagram: the kiosk, the admin dashboard and the kitchen all connect through a secure gateway to one application, which reaches a separate database for each restaurant" role="img">
+        <rect class="box" x="8"   y="10" width="112" height="34" rx="7"/><text class="lbl" x="64"  y="31" text-anchor="middle">KIOSK</text>
+        <rect class="box" x="144" y="10" width="112" height="34" rx="7"/><text class="lbl" x="200" y="31" text-anchor="middle">ADMIN</text>
+        <rect class="box" x="280" y="10" width="112" height="34" rx="7"/><text class="lbl" x="336" y="31" text-anchor="middle">KITCHEN</text>
+
+        <path class="conn" style="--l:46" d="M64 44 V74 H200"/>
+        <path class="conn" style="--l:46" d="M200 44 V74"/>
+        <path class="conn" style="--l:46" d="M336 44 V74 H200"/>
+
+        <rect class="box" x="118" y="74" width="164" height="32" rx="7"/><text class="lbl" x="200" y="94" text-anchor="middle">SECURE GATEWAY</text>
+        <path class="conn" style="--l:34" d="M200 106 V136"/>
+        <rect class="box" x="90"  y="136" width="220" height="38" rx="7"/>
+        <text class="lbl" x="200" y="153" text-anchor="middle">APPLICATION</text>
+        <text class="lbl-s" x="200" y="166" text-anchor="middle">order · kot · billing · inventory</text>
+        <path class="conn" style="--l:34" d="M200 174 V204"/>
+
+        <rect class="box-t" x="30" y="204" width="340" height="86" rx="9"/>
+        <text class="lbl-s" x="200" y="223" text-anchor="middle" style="fill:#F0E840">ONE SEPARATE DATABASE PER RESTAURANT</text>
+        <rect class="box" x="48"  y="236" width="94" height="38" rx="6"/><text class="lbl-s" x="95"  y="259" text-anchor="middle">Restaurant A</text>
+        <rect class="box" x="153" y="236" width="94" height="38" rx="6"/><text class="lbl-s" x="200" y="259" text-anchor="middle">Restaurant B</text>
+        <rect class="box" x="258" y="236" width="94" height="38" rx="6"/><text class="lbl-s" x="305" y="259" text-anchor="middle">Restaurant C</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="rule"></div></div>
+
+<!-- ================= S8 DOWNLOAD ================= -->
+<section class="sec sec-alt obs" id="desktop">
+  <div class="wrap">
+    <div class="dl rise">
+      <div>
+        <p class="kicker">Desktop</p>
+        <h2 class="big" style="margin-bottom:.9rem">Windows app. One file.</h2>
+        <p class="lede">Download it, run it, sign in. Or use any browser if you would rather not install anything.</p>
+        <p class="meta" id="dlMeta">STS-Kiosk-Setup.exe · 15.2 MB · Windows</p>
+      </div>
+      <a class="btn btn-primary" href="assets/STS-Kiosk-Setup.exe" download>Download for Windows</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= S9 FAQ ================= -->
+<section class="sec obs" id="faq">
+  <div class="wrap">
+    <div class="centered">
+      <p class="kicker rise">Questions</p>
+      <h2 class="big rise" style="max-width:24ch">Questions you are about to ask.</h2>
+    </div>
+    <div class="faq rise">
+      <details><summary>Does it make bills the tax office accepts?</summary><div class="ans"><div>The billing module talks to CBMS directly. It builds the invoice, records the tax, prepares the CBMS payload and handles the response. Invoice PDFs are generated by the system.</div></div></details>
+      <details><summary>Can I run two restaurants on one system?</summary><div class="ans"><div>Yes. Each one gets its own separate database. Their menus, orders and bills never touch.</div></div></details>
+      <details><summary>Will it work with my kitchen printer?</summary><div class="ans"><div>The KOT Printer Agent runs on your kitchen machine and talks to your printer locally, so printing does not depend on a round trip to a server far away.</div></div></details>
+      <details><summary>How do guests pay at the kiosk?</summary><div class="ans"><div>Fonepay, eSewa, Khalti and cash.</div></div></details>
+      <details><summary>Do I have to install anything?</summary><div class="ans"><div>There is a Windows app if you want one. The admin side also runs in a browser.</div></div></details>
+      <details><summary>Is another restaurant's data anywhere near mine?</summary><div class="ans"><div>No. Each restaurant has its own separate database, and the separation is enforced by the database itself, not just by the software.</div></div></details>
+      <details><summary>What does it cost?</summary><div class="ans"><div>It depends on how many terminals and which modules you want. Ask on the demo and you will get a straight number.</div></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= S10 CLOSE ================= -->
+<section class="sec sec-alt obs" id="demo">
+  <div class="wrap close">
+    <p class="kicker rise">Next</p>
+    <h2 class="big rise" style="max-width:20ch">See it running on your own menu.</h2>
+    <p class="lede rise">Send one message. We will set up a demo with your items, your tables and your tax settings, so you are looking at your restaurant and not a sample one.</p>
+    <div class="cta rise">
+      <a class="btn btn-primary" id="waBtn" href="https://wa.me/9779862041915?text=Hi%2C%20I%20would%20like%20to%20request%20a%20demo%20for%20STS%20Kiosk." target="_blank" rel="noopener">Book a demo on WhatsApp</a>
+      <a class="btn btn-ghost" href="assets/STS-Kiosk-Setup.exe" download>Download for Windows</a>
+    </div>
+    <p class="tel rise">Or call <a href="tel:+9779862041915">+977 9862041915</a> · Sitoula Tech Solutions, Kathmandu</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <a class="brand brand-foot" href="#top" aria-label="STS, home">
+        <img src="assets/sts-logo.png" alt="STS, We Make IT Happen" width="448" height="470">
+      </a>
+      <nav aria-label="Footer">
+        <a href="#ordering">Floor</a>
+        <a href="#kitchen">Kitchen</a>
+        <a href="#billing">Billing</a>
+        <a href="#stock">Stock</a>
+        <a href="#kiosk">Kiosk add-on</a>
+        <a href="#under">Architecture</a>
+        <a href="#faq">Questions</a>
+        <a href="#demo">Book a demo</a>
+      </nav>
+      <p style="font-size:.86rem;color:var(--text-secondary)">Sitoula Tech Solutions<br>Kathmandu, Nepal<br><a href="tel:+9779862041915">+977 9862041915</a></p>
+    </div>
+    <p class="disclose">Hero artwork is generated. Every product screenshot on this page is a real screen from the software, unretouched.</p>
+  </div>
+</footer>
+
+</div>
+
+<script>
+(function(){
+"use strict";
+
+/* ---------- helpers ---------- */
+var clamp = function(v,lo,hi){ return Math.min(hi, Math.max(lo, v)); };
+var smoothstep = function(p,e0,e1){ var t = clamp((p-e0)/(e1-e0),0,1); return t*t*(3-2*t); };
+function rng(seed){ var s = seed>>>0; return function(){ s = (s*1664525 + 1013904223)>>>0; return s/4294967296; }; }
+
+var video   = document.getElementById('video');
+var stage   = document.getElementById('stage');
+var posterEl= document.getElementById('poster');
+var ring    = document.getElementById('ring');
+var heroEl  = document.getElementById('hero');
+var bandEls = [].slice.call(document.querySelectorAll('.band'));
+
+var VIDEO_URL   = 'assets/hero-scrub.mp4';
+var VIDEO_BYTES = 5135410;
+var POSTER_URL  = 'assets/hero-poster.jpg';
+var ENDING_URL  = 'assets/hero-ending.jpg';
+
+/* ---------- CURSOR SPOTLIGHT ---------- */
+(function(){
+  var sp = document.getElementById('spotlight');
+  if (!sp) return;
+  var mx = window.innerWidth * 0.5, my = window.innerHeight * 0.5;
+  var tx = mx, ty = my, raf = null, on = false;
+  function loop(){
+    /* the lerp gives the light weight — it drifts to the cursor instead of jumping */
+    mx += (tx - mx) * 0.14;
+    my += (ty - my) * 0.14;
+    document.documentElement.style.setProperty('--mx', mx.toFixed(1) + 'px');
+    document.documentElement.style.setProperty('--my', my.toFixed(1) + 'px');
+    if (Math.abs(tx - mx) > 0.4 || Math.abs(ty - my) > 0.4){
+      raf = requestAnimationFrame(loop);
+    } else { raf = null; }
+  }
+  addEventListener('pointermove', function(e){
+    tx = e.clientX; ty = e.clientY;
+    if (!on){ on = true; sp.classList.add('on'); }
+    if (raf === null) raf = requestAnimationFrame(loop);
+  }, {passive:true});
+  addEventListener('pointerleave', function(){ sp.classList.remove('on'); on = false; });
+})();
+
+/* ---------- text splitting (seeded, once at load) ---------- */
+bandEls.forEach(function(band){
+  var el = band.querySelector('.split');
+  if (!el) return;
+  var text  = el.textContent;
+  var seed  = parseInt(el.getAttribute('data-seed') || '1', 10);
+  var rand  = rng(seed);
+  var emIdx = (el.getAttribute('data-em') || '').split(',').map(Number);
+  var spread= parseFloat(band.getAttribute('data-spread') || '0');
+  var words = text.split(' ');
+  var totalChars = text.replace(/ /g,'').length;
+
+  var sr = document.createElement('span');
+  sr.className = 'vh'; sr.textContent = text;
+
+  var vis = document.createElement('span');
+  vis.setAttribute('aria-hidden','true');
+
+  var ci = 0;
+  words.forEach(function(word, wi){
+    var w = document.createElement('span');
+    w.className = 'w' + (emIdx.indexOf(wi) > -1 ? ' em' : '');
+    w.style.setProperty('--th', (wi / Math.max(1, words.length-1) * 0.42 + rand()*0.06).toFixed(3));
+    for (var i=0;i<word.length;i++){
+      var c = document.createElement('span');
+      c.className = 'c';
+      c.textContent = word[i];
+      var th = spread ? (ci/Math.max(1,totalChars-1))*spread + rand()*0.06
+                      : rand()*0.5;
+      c.style.setProperty('--th', th.toFixed(3));
+      c.style.setProperty('--jx', ((rand()*2-1)*34).toFixed(1)+'px');
+      c.style.setProperty('--jy', ((rand()*2-1)*26).toFixed(1)+'px');
+      c.style.setProperty('--jr', ((rand()*2-1)*12).toFixed(1)+'deg');
+      w.appendChild(c); ci++;
+    }
+    vis.appendChild(w);
+    if (wi < words.length-1) vis.appendChild(document.createTextNode(' '));
+  });
+
+  el.textContent = '';
+  el.appendChild(sr);
+  el.appendChild(vis);
+});
+
+/* band state caches (delta gating) */
+var bands = bandEls.map(function(el){
+  return {
+    el: el,
+    a: parseFloat(el.getAttribute('data-a')),
+    b: parseFloat(el.getAttribute('data-b')),
+    ramp: parseFloat(el.getAttribute('data-ramp') || '0') || 0,
+    staged: el.hasAttribute('data-staged'),
+    op: -1, k: -1, sub: -1, cta: -1
+  };
+});
+
+/* ---------- the drive loop ---------- */
+var target = 0, shown = 0, rafId = null, lastTick = 0;
+var heroOnScreen = true;
+var loadK = 0, loadStart = 0;
+
+/* butter: a softer lerp alpha and longer settle window */
+var RATE_REST = 0.65, RATE_MAX = 2.6;
+var rate = RATE_REST, rateShown = RATE_REST;
+var lastY = 0, lastYT = 0;
+
+function startBackdrop(){
+  try { video.loop = true; video.playbackRate = RATE_REST; } catch(e){}
+  var pr = video.play();
+  if (pr && pr.catch) pr.catch(function(){});
+}
+
+function noteScrollSpeed(){
+  var now = performance.now();
+  var dy = Math.abs(window.scrollY - lastY);
+  var dt = Math.max(16, now - (lastYT || now));
+  lastY = window.scrollY; lastYT = now;
+  var vel = dy / dt;
+  rate = clamp(RATE_REST + vel * 1.5, RATE_REST, RATE_MAX);
+}
+
+function heroProgress(){
+  var r = heroEl.getBoundingClientRect();
+  var range = heroEl.offsetHeight - window.innerHeight;
+  if (range <= 0) return 0;
+  return clamp(-r.top / range, 0, 1);
+}
+
+function updateCaptions(p){
+  for (var i=0;i<bands.length;i++){
+    var B = bands[i];
+    var f = Math.min(0.02, (B.b - B.a)/3);
+    var inOp  = (i === 0) ? 1 : smoothstep(p, B.a, B.a + f);
+    var outOp = (i === bands.length-1) ? 0 : smoothstep(p, B.b - f, B.b);
+    var op = inOp * (1 - outOp);
+
+    var ramp = B.ramp || Math.min(0.025, (B.b - B.a) * 0.35);
+    var k = clamp((p - B.a) / ramp, 0, 1);
+    if (i === 0) k = Math.max(k, loadK);
+
+    if (Math.abs(op - B.op) > 0.004){ B.op = op; B.el.style.opacity = op.toFixed(3); }
+    if (Math.abs(k - B.k) > 0.008){ B.k = k; B.el.style.setProperty('--k', k.toFixed(3)); }
+
+    if (B.staged){
+      var ks = clamp((p - B.a - (B.b-B.a)*0.30) / ((B.b-B.a)*0.22), 0, 1);
+      var kb = clamp((p - B.a - (B.b-B.a)*0.46) / ((B.b-B.a)*0.22), 0, 1);
+      if (Math.abs(ks - B.sub) > 0.008){ B.sub = ks; B.el.style.setProperty('--ks-sub', ks.toFixed(3)); }
+      if (Math.abs(kb - B.cta) > 0.008){ B.cta = kb; B.el.style.setProperty('--ks-cta', kb.toFixed(3)); }
+    }
+  }
+}
+
+/* ---------- gated seeks ---------- */
+var seekBusy = false, pendingTime = null;
+var lastSeekT = -1;
+var FRAME = 1/24;
+function requestSeek(t){
+  if (!video.duration || isNaN(video.duration)) return;
+  if (lastSeekT >= 0 && Math.abs(t - lastSeekT) < FRAME * 0.5 && t > 0 && t < video.duration) return;
+  if (seekBusy){ pendingTime = t; return; }
+  seekBusy = true;
+  lastSeekT = t;
+  try { video.currentTime = t; } catch(e){ seekBusy = false; }
+}
+video.addEventListener('seeked', function(){
+  seekBusy = false;
+  if (pendingTime !== null){ var t = pendingTime; pendingTime = null; requestSeek(t); }
+});
+video.addEventListener('error', function(){
+  seekBusy = false; pendingTime = null; failVideo();
+});
+
+function tick(now){
+  var dt = Math.min(100, now - (lastTick || now));
+  lastTick = now;
+  /* softer lerp: 0.22 gives a longer, silkier ride to target than 0.28 did */
+  var k = 0.22;
+  shown += (target - shown) * (1 - Math.pow(1 - k, dt/16.667));
+
+  if (loadStart && loadK < 1){
+    loadK = clamp((now - loadStart)/900, 0, 1);
+  }
+
+  rateShown += (rate - rateShown) * (1 - Math.pow(1 - 0.08, dt / 16.667));
+  if (Math.abs(rateShown - (video.playbackRate || 1)) > 0.03){
+    try { video.playbackRate = rateShown; } catch(e){}
+  }
+  rate += (RATE_REST - rate) * (1 - Math.pow(1 - 0.05, dt / 16.667));
+
+  var settled = Math.abs(target - shown) < 0.0004;
+  if (settled){ shown = target; }
+
+  updateCaptions(shown);
+
+  if (settled && loadK >= 1 && Math.abs(rateShown - RATE_REST) < 0.02){ rafId = null; lastTick = 0; }
+  else { rafId = requestAnimationFrame(tick); }
+}
+
+function onScroll(){
+  target = heroProgress();
+  noteScrollSpeed();
+  if (rafId === null && heroOnScreen) rafId = requestAnimationFrame(tick);
+}
+
+if ('IntersectionObserver' in window){
+  new IntersectionObserver(function(es){
+    heroOnScreen = es[0].isIntersecting;
+    if (heroOnScreen){
+      if (scrubOn){
+        if (video.src && video.paused) { try { video.play(); } catch(e){} }
+        if (rafId === null) rafId = requestAnimationFrame(tick);
+      }
+    } else {
+      try { video.pause(); } catch(e){}
+    }
+  }, {rootMargin:'120px'}).observe(heroEl);
+}
+
+/* ---------- blob loader with ring + watchdog ---------- */
+var heroInit = false, fetchStarted = false;
+
+function failVideo(){
+  rate = rateShown = RATE_REST;
+  if (!ring || !ring.parentNode) return;
+  var cue = document.createElementNS('http://www.w3.org/2000/svg','svg');
+  cue.setAttribute('class','cue');
+  cue.setAttribute('viewBox','0 0 48 48');
+  cue.setAttribute('aria-hidden','true');
+  cue.innerHTML = '<path d="M16 20 L24 29 L32 20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>';
+  ring.replaceWith(cue);
+  ring = null;
+  stage.classList.add('video-failed');
+}
+
+function startBlobFetch(){
+  if (fetchStarted) return;
+  fetchStarted = true;
+  loadHeroBlob().catch(failVideo);
+}
+
+function loadHeroBlob(){
+  var ctrl = new AbortController();
+  var watchdog = setTimeout(function(){ ctrl.abort(); }, 20000);
+  return fetch(VIDEO_URL, {signal: ctrl.signal}).then(function(res){
+    if (!res.ok || !res.body) throw new Error('no body');
+    var total = Number(res.headers.get('Content-Length')) || VIDEO_BYTES;
+    var reader = res.body.getReader();
+    var chunks = [], got = 0, lastRing = 0;
+    function pump(){
+      return reader.read().then(function(r){
+        if (r.done) return;
+        clearTimeout(watchdog);
+        watchdog = setTimeout(function(){ ctrl.abort(); }, 20000);
+        chunks.push(r.value); got += r.value.length;
+        var frac = Math.min(1, got/total), now = performance.now();
+        if ((now - lastRing > 100 || frac === 1) && ring){
+          lastRing = now;
+          ring.style.setProperty('--ld', Math.round(126*(1-frac)));
+        }
+        return pump();
+      });
+    }
+    return pump().then(function(){
+      clearTimeout(watchdog);
+      if (ring){ ring.style.setProperty('--ld', 0); setTimeout(function(){ if(ring) ring.style.opacity = 0; }, 400); }
+      video.src = URL.createObjectURL(new Blob(chunks, {type:'video/mp4'}));
+      video.load();
+      video.addEventListener('canplay', function(){
+        stage.classList.add('video-ready');
+        startBackdrop();
+        if (rafId === null) rafId = requestAnimationFrame(tick);
+      }, {once:true});
+    });
+  });
+}
+
+function initHeroOnce(){
+  if (heroInit) return;
+  heroInit = true;
+  posterEl.style.backgroundImage = "url('" + POSTER_URL + "')";
+  posterEl.classList.add('on');
+  var img = new Image();
+  img.onload = startBlobFetch;
+  img.onerror = startBlobFetch;
+  img.src = POSTER_URL;
+  setTimeout(startBlobFetch, 4000);
+  loadStart = performance.now();
+}
+
+/* ---------- THE FIVE GATES ---------- */
+var GATES = [
+  '(max-width: 720px)',
+  '(orientation: portrait) and (max-width: 1024px)',
+  '(orientation: portrait) and (pointer: coarse)',
+  '(orientation: landscape) and (pointer: coarse) and (max-height: 560px)',
+  '(prefers-reduced-motion: reduce)'
+];
+var MQLS = GATES.map(function(q){ return matchMedia(q); });
+var scrubOn = false;
+
+function enableScrub(){
+  if (scrubOn) return;
+  scrubOn = true;
+  initHeroOnce();
+  window.addEventListener('scroll', onScroll, {passive:true});
+  bands.forEach(function(B){ B.op = -1; B.k = -1; B.sub = -1; B.cta = -1; });
+  unpinFinalStates();
+  updateCaptions(heroProgress());
+  onScroll();
+}
+function disableScrub(){
+  if (!scrubOn) return;
+  scrubOn = false;
+  try { video.pause(); } catch(e){}
+  window.removeEventListener('scroll', onScroll);
+  if (rafId !== null){ cancelAnimationFrame(rafId); rafId = null; }
+}
+function applyHeroMode(){
+  var gated = MQLS.some(function(m){ return m.matches; });
+  if (gated) disableScrub(); else enableScrub();
+}
+MQLS.forEach(function(m){
+  if (m.addEventListener) m.addEventListener('change', applyHeroMode);
+  else if (m.addListener) m.addListener(applyHeroMode);
+});
+
+(function(){
+  var el = document.getElementById('staticShot');
+  if (!el) return;
+  var gated = MQLS.some(function(m){ return m.matches; });
+  function paint(){ el.style.backgroundImage = "url('" + ENDING_URL + "')"; }
+  if (gated) paint();
+  MQLS.forEach(function(m){
+    var h = function(){ if (MQLS.some(function(x){return x.matches;})) paint(); };
+    if (m.addEventListener) m.addEventListener('change', h);
+  });
+})();
+
+/* ---------- NAV ---------- */
+var nav = document.getElementById('nav');
+var navSolid = false;
+function navUpdate(){
+  var s = window.scrollY > 40;
+  if (s !== navSolid){ navSolid = s; nav.classList.toggle('solid', s); }
+}
+window.addEventListener('scroll', navUpdate, {passive:true});
+navUpdate();
+
+/* ---------- SPINE (page progress) with lerp for silk ---------- */
+var spineFill = document.getElementById('spineFill');
+var spineDot  = document.getElementById('spineDot');
+var spineTarget = 0, spineShown = 0, spineRaf = null, spineLast = 0;
+function spineTick(now){
+  var dt = Math.min(100, now - (spineLast || now));
+  spineLast = now;
+  spineShown += (spineTarget - spineShown) * (1 - Math.pow(1 - 0.2, dt/16.667));
+  var v = (spineShown * 100).toFixed(2);
+  spineFill.style.height = v + '%';
+  spineDot.style.top = v + '%';
+  document.documentElement.style.setProperty('--sp', spineShown.toFixed(4));
+  if (Math.abs(spineTarget - spineShown) > 0.0005){
+    spineRaf = requestAnimationFrame(spineTick);
+  } else {
+    spineShown = spineTarget;
+    spineFill.style.height = (spineShown*100).toFixed(2) + '%';
+    spineDot.style.top = (spineShown*100).toFixed(2) + '%';
+    document.documentElement.style.setProperty('--sp', spineShown.toFixed(4));
+    spineRaf = null; spineLast = 0;
+  }
+}
+function spineUpdate(){
+  var max = document.documentElement.scrollHeight - window.innerHeight;
+  spineTarget = max > 0 ? clamp(window.scrollY/max, 0, 1) : 0;
+  if (spineRaf === null) spineRaf = requestAnimationFrame(spineTick);
+}
+window.addEventListener('scroll', spineUpdate, {passive:true});
+spineUpdate();
+
+/* ---------- WHOLE-PAGE MOTION ---------- */
+
+/* split every section headline into words */
+[].forEach.call(document.querySelectorAll('h2.big'), function(h){
+  var words = h.textContent.split(' ');
+  var vis = document.createElement('span');
+  words.forEach(function(w, i){
+    var s = document.createElement('span');
+    s.className = 'hw';
+    s.textContent = w;
+    s.style.setProperty('--hd', (i * 0.06).toFixed(3) + 's');
+    vis.appendChild(s);
+    if (i < words.length - 1) vis.appendChild(document.createTextNode(' '));
+  });
+  h.textContent = '';
+  h.appendChild(vis);
+});
+
+/* lede paragraphs arrive line by line */
+[].forEach.call(document.querySelectorAll('.lede'), function(el){
+  if (el.querySelector('.lw')) return;
+  var words = el.textContent.split(' ');
+  var vis = document.createElement('span');
+  words.forEach(function(w, i){
+    var sp = document.createElement('span');
+    sp.className = 'lw'; sp.textContent = w;
+    sp.style.setProperty('--ld', Math.min(0.5, i * 0.018).toFixed(3) + 's');
+    vis.appendChild(sp);
+    if (i < words.length - 1) vis.appendChild(document.createTextNode(' '));
+  });
+  el.textContent = '';
+  el.appendChild(vis);
+});
+
+/* frame + card focus-follow (a soft radial glow that tracks the cursor) */
+var finePointer = matchMedia('(hover: hover) and (pointer: fine)');
+function attachFocusFollow(sel){
+  [].forEach.call(document.querySelectorAll(sel), function(el){
+    el.addEventListener('pointermove', function(e){
+      if (!finePointer.matches || document.body.classList.contains('pinned')) return;
+      var r = el.getBoundingClientRect();
+      el.style.setProperty('--fx', ((e.clientX - r.left) / r.width * 100) + '%');
+      el.style.setProperty('--fy', ((e.clientY - r.top) / r.height * 100) + '%');
+    });
+  });
+}
+attachFocusFollow('.shotframe');
+attachFocusFollow('.card');
+
+/* cards lean toward the cursor */
+var tiltRaf = null, tiltQueue = [];
+function flushTilt(){
+  tiltRaf = null;
+  tiltQueue.forEach(function(j){ j(); });
+  tiltQueue.length = 0;
+}
+function queueTilt(fn){
+  tiltQueue.push(fn);
+  if (tiltRaf === null) tiltRaf = requestAnimationFrame(flushTilt);
+}
+
+[].forEach.call(document.querySelectorAll('.card'), function(card){
+  card.addEventListener('pointermove', function(e){
+    if (!finePointer.matches || document.body.classList.contains('pinned')) return;
+    var r = card.getBoundingClientRect();
+    var px = (e.clientX - r.left) / r.width - 0.5;
+    var py = (e.clientY - r.top) / r.height - 0.5;
+    queueTilt(function(){
+      card.classList.add('tilting');
+      card.style.setProperty('--ry', (px * 8).toFixed(2) + 'deg');
+      card.style.setProperty('--rx', (-py * 8).toFixed(2) + 'deg');
+      card.style.setProperty('--ty', '-6px');
+    });
+  });
+  card.addEventListener('pointerleave', function(){
+    card.classList.remove('tilting');
+    card.style.setProperty('--ry','0deg');
+    card.style.setProperty('--rx','0deg');
+    card.style.setProperty('--ty','0px');
+  });
+});
+
+/* magnetic buttons */
+[].forEach.call(document.querySelectorAll('.btn-primary, .btn-ghost'), function(btn){
+  btn.addEventListener('pointermove', function(e){
+    if (!finePointer.matches || document.body.classList.contains('pinned')) return;
+    var r = btn.getBoundingClientRect();
+    queueTilt(function(){
+      btn.style.setProperty('--mgx', ((e.clientX - (r.left + r.width/2)) * 0.16).toFixed(1) + 'px');
+      btn.style.setProperty('--mgy', ((e.clientY - (r.top + r.height/2)) * 0.20).toFixed(1) + 'px');
+    });
+  });
+  btn.addEventListener('pointerleave', function(){
+    btn.style.setProperty('--mgx','0px'); btn.style.setProperty('--mgy','0px');
+  });
+});
+
+/* spec chips settle one after another */
+[].forEach.call(document.querySelectorAll('.spec span'), function(el, i){
+  el.style.setProperty('--cd', (i * 0.05).toFixed(3) + 's');
+});
+
+/* rules draw across when they come into view */
+if ('IntersectionObserver' in window){
+  var ruleIo = new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if (!e.isIntersecting) return;
+      e.target.classList.add('drawn');
+      ruleIo.unobserve(e.target);
+    });
+  }, {threshold:0.6});
+  [].forEach.call(document.querySelectorAll('.rule'), function(r){ ruleIo.observe(r); });
+} else {
+  [].forEach.call(document.querySelectorAll('.rule'), function(r){ r.classList.add('drawn'); });
+}
+
+/* parallax — lerped for smoother drift */
+var parEls = [];
+if ('IntersectionObserver' in window){
+  var parIo = new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      var i = parEls.indexOf(e.target);
+      if (e.isIntersecting && i === -1) parEls.push(e.target);
+      else if (!e.isIntersecting && i > -1){ parEls.splice(i,1); e.target.style.setProperty('--py','0px'); e.target._pyt = 0; e.target._py = 0; }
+    });
+  }, {rootMargin:'12% 0px'});
+  [].forEach.call(document.querySelectorAll('.shotframe img, .card img'), function(im){ parIo.observe(im); });
+}
+
+var parRaf = null, parLast = 0;
+function parTick(now){
+  var dt = Math.min(100, now - (parLast || now));
+  parLast = now;
+  var vh = window.innerHeight;
+  var anyMoving = false;
+  for (var i=0;i<parEls.length;i++){
+    var el = parEls[i], r = el.getBoundingClientRect();
+    var mid = (r.top + r.height/2) / vh;
+    var target = clamp((0.5 - mid) * 26, -13, 13);
+    el._py = el._py || 0;
+    el._py += (target - el._py) * (1 - Math.pow(1 - 0.16, dt/16.667));
+    var v = Math.round(el._py * 10) / 10;
+    if (el._pyv !== v){ el._pyv = v; el.style.setProperty('--py', v + 'px'); }
+    if (Math.abs(target - el._py) > 0.05) anyMoving = true;
+  }
+  if (anyMoving && !document.body.classList.contains('pinned')){
+    parRaf = requestAnimationFrame(parTick);
+  } else {
+    parRaf = null; parLast = 0;
+  }
+}
+function parallax(){
+  if (document.body.classList.contains('pinned') || !parEls.length) return;
+  if (parRaf === null) parRaf = requestAnimationFrame(parTick);
+}
+window.addEventListener('scroll', parallax, {passive:true});
+window.addEventListener('resize', parallax, {passive:true});
+parallax();
+
+/* ---------- ENTRANCES ---------- */
+var obs = document.querySelectorAll('.obs');
+if ('IntersectionObserver' in window){
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if (!e.isIntersecting) return;
+      e.target.classList.add('in');
+      setTimeout(function(){ e.target.classList.add('done'); }, 1600);
+      io.unobserve(e.target);
+    });
+  }, {threshold:0.12, rootMargin:'0px 0px -8% 0px'});
+  [].forEach.call(obs, function(o){ io.observe(o); });
+} else {
+  [].forEach.call(obs, function(o){ o.classList.add('in','done'); });
+}
+
+/* ---------- THE LINE ---------- */
+var lineRail = document.getElementById('lineRail');
+var railFill = document.getElementById('railFill');
+var stepEls  = [].slice.call(document.querySelectorAll('.lstep'));
+var nodeEls  = stepEls.map(function(s){ return s.querySelector('.node'); });
+
+var nodeTops = [], railTop = 0, railSpan = 1;
+function measureRail(){
+  if (!lineRail || !nodeEls.length) return;
+  var rr = lineRail.getBoundingClientRect();
+  nodeTops = nodeEls.map(function(n){
+    var r = n.getBoundingClientRect();
+    return (r.top - rr.top) + r.height/2;
+  });
+  railTop = nodeTops[0];
+  railSpan = Math.max(1, nodeTops[nodeTops.length-1] - railTop);
+  var rail = lineRail.querySelector('.rail');
+  if (rail){ rail.style.top = railTop + 'px'; rail.style.bottom = 'auto'; rail.style.height = railSpan + 'px'; }
+}
+
+/* the line is lerped for silk: target vs shown, closes the gap each frame */
+var lineTarget = 0, lineShown = 0, lineRaf = null, lineLast = 0, litCount = -1;
+function setLine(p){
+  lineTarget = clamp(p, 0, 1);
+  if (lineRaf === null) lineRaf = requestAnimationFrame(lineTickFn);
+}
+function lineTickFn(now){
+  var dt = Math.min(100, now - (lineLast || now));
+  lineLast = now;
+  lineShown += (lineTarget - lineShown) * (1 - Math.pow(1 - 0.22, dt/16.667));
+  if (!nodeTops.length || railSpan <= 2) measureRail();
+  railFill.style.height = (lineShown * railSpan).toFixed(1) + 'px';
+  var reached = railTop + lineShown * railSpan;
+  var n = 0;
+  for (var i=0;i<nodeTops.length;i++){ if (reached >= nodeTops[i] - 0.5) n = i+1; }
+  if (n !== litCount){
+    litCount = n;
+    stepEls.forEach(function(s,j){ s.classList.toggle('lit', j < n); });
+    if (pad && !fired) pad.classList.toggle('ready', n >= stepEls.length);
+  }
+  if (Math.abs(lineTarget - lineShown) > 0.001){
+    lineRaf = requestAnimationFrame(lineTickFn);
+  } else {
+    lineShown = lineTarget;
+    railFill.style.height = (lineShown * railSpan).toFixed(1) + 'px';
+    lineRaf = null; lineLast = 0;
+  }
+}
+function remeasureRail(){ measureRail(); litCount = -1; if (lineDriven) lineScroll(); else setLine(hold); }
+addEventListener('resize', remeasureRail, {passive:true});
+addEventListener('load', remeasureRail);
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(remeasureRail);
+if (window.ResizeObserver && lineRail) new ResizeObserver(remeasureRail).observe(lineRail);
+
+/* scroll-drawn until fired */
+var pathSec = document.getElementById('path');
+var lineDriven = true;
+function lineScroll(){
+  if (!lineDriven || !pathSec) return;
+  var r = pathSec.getBoundingClientRect();
+  var p = clamp((window.innerHeight*0.82 - r.top) / (r.height*0.72), 0, 1);
+  setLine(p);
+}
+window.addEventListener('scroll', lineScroll, {passive:true});
+lineScroll();
+
+/* ---------- FIRE THE ORDER ---------- */
+var pad      = document.getElementById('pad');
+var padLabel = document.getElementById('padLabel');
+var fireNote = document.getElementById('fireNote');
+var hold = 0, holding = false, holdRaf = null, holdLast = 0, fired = false;
+
+function holdTick(now){
+  if (fired){
+    hold = 1;
+    pad.style.setProperty('--hold', 1);
+    setLine(1);
+    holdRaf = null; holdLast = 0;
+    return;
+  }
+  var dt = Math.min(100, now - (holdLast || now));
+  holdLast = now;
+  hold += (holding ? 1 : -1) * (dt/1150);
+  hold = clamp(hold, 0, 1);
+  pad.style.setProperty('--hold', hold.toFixed(3));
+  lineDriven = false;
+  setLine(hold);
+
+  if (hold >= 1 && !fired){
+    fired = true;
+    pad.classList.remove('ready');
+    pad.classList.add('done');
+    padLabel.textContent = 'Fired';
+    fireNote.classList.add('on');
+  }
+  if (hold <= 0 && !holding){
+    holdRaf = null; holdLast = 0;
+    lineDriven = true; lineScroll();
+    return;
+  }
+  if (hold >= 1 && !holding){ holdRaf = null; holdLast = 0; return; }
+  holdRaf = requestAnimationFrame(holdTick);
+}
+function holdStart(e){
+  if (e && e.cancelable) e.preventDefault();
+  if (fired) return;
+  holding = true;
+  if (holdRaf === null) holdRaf = requestAnimationFrame(holdTick);
+}
+function holdEnd(){
+  holding = false;
+  if (holdRaf === null && hold > 0 && !fired) holdRaf = requestAnimationFrame(holdTick);
+}
+if (pad){
+  pad.addEventListener('pointerdown', function(e){
+    try { pad.setPointerCapture(e.pointerId); } catch(_){}
+    holdStart(e);
+  });
+  pad.addEventListener('pointerup', holdEnd);
+  pad.addEventListener('pointercancel', holdEnd);
+  pad.addEventListener('keydown', function(e){
+    if (e.key === ' ' || e.key === 'Enter'){ e.preventDefault(); holdStart(); }
+  });
+  pad.addEventListener('keyup', function(e){
+    if (e.key === ' ' || e.key === 'Enter') holdEnd();
+  });
+}
+
+/* ---------- REDUCED MOTION ---------- */
+function pinToFinalStates(){
+  document.body.classList.add('pinned');
+  rate = rateShown = RATE_REST;
+  try { video.pause(); } catch(e){}
+  disableScrub();
+  lineDriven = false;
+  if (holdRaf !== null){ cancelAnimationFrame(holdRaf); holdRaf = null; }
+  hold = 1; fired = true;
+  if (pad){ pad.style.setProperty('--hold', 1); pad.classList.add('done'); padLabel.textContent = 'Fired'; }
+  if (fireNote) fireNote.classList.add('on');
+  setLine(1);
+  [].forEach.call(obs, function(o){ o.classList.add('in','done'); });
+  [].forEach.call(document.querySelectorAll('.rule'), function(r){ r.classList.add('drawn'); });
+  [].forEach.call(document.querySelectorAll('.shotframe img, .card img'), function(im){
+    im.style.setProperty('--py','0px'); im._py = 0;
+  });
+  if (spineFill){ spineFill.style.height = '100%'; }
+}
+function unpinFinalStates(){
+  if (!document.body.classList.contains('pinned')) return;
+  document.body.classList.remove('pinned');
+  lineDriven = true;
+  litCount = -1;
+  lineScroll();
+  spineUpdate();
+  parallax();
+  [].forEach.call(document.querySelectorAll('.card'), function(c){
+    c.classList.remove('tilting');
+    c.style.setProperty('--rx','0deg'); c.style.setProperty('--ry','0deg'); c.style.setProperty('--ty','0px');
+  });
+  [].forEach.call(document.querySelectorAll('.btn-primary, .btn-ghost'), function(b){
+    b.style.setProperty('--mgx','0px'); b.style.setProperty('--mgy','0px');
+  });
+}
+var rmq = matchMedia('(prefers-reduced-motion: reduce)');
+var rmHandler = function(e){ if (e.matches) pinToFinalStates(); else applyHeroMode(); };
+if (rmq.addEventListener) rmq.addEventListener('change', rmHandler);
+else if (rmq.addListener) rmq.addListener(rmHandler);
+if (rmq.matches) pinToFinalStates();
+
+/* ---------- PAUSE ON HIDDEN TAB ---------- */
+document.addEventListener('visibilitychange', function(){
+  document.body.classList.toggle('paused', document.hidden);
+});
+
+/* ---------- GO ---------- */
+applyHeroMode();
+
+})();
+</script>
+</body>
 </html>

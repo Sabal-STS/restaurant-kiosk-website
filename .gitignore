@@ -1,24 +1,21 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+# OS
+.DS_Store
+Thumbs.db
 
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
+# Editors
 .vscode/*
 !.vscode/extensions.json
-.idea
-.DS_Store
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# Local tooling
+.claude/
+
+# Raw generations and review copies never belong in the deploy folder.
+# They live one level up, in ../sts-kiosk-review/
+review/
+*.zip

@@ -1,0 +1,18 @@
+{
+  "name": "STS Kiosk - Restaurant Software Nepal",
+  "short_name": "STS Kiosk",
+  "description": "Self-ordering kiosk, waiter POS, live kitchen tickets and IRD CBMS billing. One system, built in Nepal.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#0B0A08",
+  "theme_color": "#0B0A08",
+  "icons": [
+    {
+      "src": "assets/sts_logo.png",
+      "sizes": "192x192 512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
